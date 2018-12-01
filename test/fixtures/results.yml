@@ -1,0 +1,53 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Best_Picture: MyString
+  Actor_Leading: MyString
+  Actress_Leading: MyString
+  Actor_Supporting: MyString
+  Actress_Supporting: MyString
+  Animated_Film: MyString
+  Cinematography: MyString
+  Costume_Design: MyString
+  Director: MyString
+  Documentary: MyString
+  Documentary_Short: MyString
+  Film_Editing: MyString
+  Foreign_Film: MyString
+  Makeup_Hair: MyString
+  Original_Score: MyString
+  Original_Song: MyString
+  Production_Design: MyString
+  Animated_Short_Film: MyString
+  Short_Film: MyString
+  Sound_Editing: MyString
+  Sound_Mixing: MyString
+  Visual_Effects: MyString
+  Adapted_Screenplay: MyString
+  Original_Screenplay: MyString
+
+two:
+  Best_Picture: MyString
+  Actor_Leading: MyString
+  Actress_Leading: MyString
+  Actor_Supporting: MyString
+  Actress_Supporting: MyString
+  Animated_Film: MyString
+  Cinematography: MyString
+  Costume_Design: MyString
+  Director: MyString
+  Documentary: MyString
+  Documentary_Short: MyString
+  Film_Editing: MyString
+  Foreign_Film: MyString
+  Makeup_Hair: MyString
+  Original_Score: MyString
+  Original_Song: MyString
+  Production_Design: MyString
+  Animated_Short_Film: MyString
+  Short_Film: MyString
+  Sound_Editing: MyString
+  Sound_Mixing: MyString
+  Visual_Effects: MyString
+  Adapted_Screenplay: MyString
+  Original_Screenplay: MyString

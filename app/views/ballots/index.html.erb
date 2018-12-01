@@ -1,0 +1,87 @@
+<p id="notice"><%= notice %></p>
+<%= button_to "Create Your Ballot Here".html_safe, new_ballot_path, :method => :get, :id => "button_id", :class => "button"%>
+<%= button_to "View Results".html_safe, Result, :method => :get, :id => "button_id", :class => "rbutton"%>
+
+
+      
+        
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Best picture</th>
+      <th>Actor leading</th>
+      <th>Actress leading</th>
+      <th>Actor supporting</th>
+      <th>Actress supporting</th>
+      <th>Animated film</th>
+      <th>Cinematography</th>
+      <th>Costume design</th>
+      <th>Director</th>
+      <th>Documentary</th>
+      <th>Documentary short</th>
+      <th>Film editing</th>
+      <th>Foreign film</th>
+      <th>Makeup hair</th>
+      <th>Original score</th>
+      <th>Original song</th>
+      <th>Production design</th>
+      <th>Animated short film</th>
+      <th>Short film</th>
+      <th>Sound editing</th>
+      <th>Sound mixing</th>
+      <th>Visual effects</th>
+      <th>Adapted screenplay</th>
+      <th>Original screenplay</th>
+      <th>Date Time Created</th>
+      <th>Date Time Modified</th>
+       
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+ 
+    <% @ballots.each do |ballot| %>
+          
+      <tr>
+        <td><%= ballot.Name %></td>
+        <td><%= ballot.Best_Picture %></td>
+        <td><%= ballot.Actor_Leading %></td>
+        <td><%= ballot.Actress_Leading %></td>
+        <td><%= ballot.Actor_Supporting %></td>
+        <td><%= ballot.Actress_Supporting %></td>
+        <td><%= ballot.Animated_Film %></td>
+        <td><%= ballot.Cinematography %></td>
+        <td><%= ballot.Costume_Design %></td>
+        <td><%= ballot.Director %></td>
+        <td><%= ballot.Documentary %></td>
+        <td><%= ballot.Documentary_Short %></td>
+        <td><%= ballot.Film_Editing %></td>
+        <td><%= ballot.Foreign_Film %></td>
+        <td><%= ballot.Makeup_Hair %></td>
+        <td><%= ballot.Original_Score %></td>
+        <td><%= ballot.Original_Song %></td>
+        <td><%= ballot.Production_Design %></td>
+        <td><%= ballot.Animated_Short_Film %></td>
+        <td><%= ballot.Short_Film %></td>
+        <td><%= ballot.Sound_Editing %></td>
+        <td><%= ballot.Sound_Mixing %></td>
+        <td><%= ballot.Visual_Effects %></td>
+        <td><%= ballot.Adapted_Screenplay %></td>
+        <td><%= ballot.Original_Screenplay %></td>
+        <td><%= local_time(ballot.created_at) %></td>
+        <td><%= local_time(ballot.updated_at) %></td>
+        <td><%= link_to 'Show', ballot %></td>
+        <td><%= link_to 'Edit', edit_ballot_path(ballot) %></td>
+        <td><%= link_to 'Destroy', ballot, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+      
+    <% end %>
+      
+  </tbody>
+
+<br>
+
+

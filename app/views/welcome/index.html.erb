@@ -1,0 +1,8 @@
+<h1>Oscar ballot game - 90th Academy Awards - Sunday, March 3, 2018</h1>
+<p>Create your ballot.</p>
+<p>Challange your friends.</p>
+<p>Best result wins.</p>
+
+<%= button_to "Create Your Ballot Here".html_safe, new_ballot_path, :method => :get, :id => "button_id", :class => "button"%>
+
+<%= button_to "View Results".html_safe, Result, :method => :get, :id => "button_id", :class => "rbutton"%>

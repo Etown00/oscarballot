@@ -1,0 +1,211 @@
+<%= form_for(@result) do |f| %>
+  <% if @result.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@result.errors.count, "error") %> prohibited this result from being saved:</h2>
+
+      <ul>
+      <% @result.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Best_Picture %><br>
+      <%= f.radio_button :Best_Picture, 'Call Me by Your Name' %> Call Me by Your Name<br />
+      <%= f.radio_button :Best_Picture, 'Darkest Hour' %> Darkest Hour<br />
+      <%= f.radio_button :Best_Picture, 'Dunkirk'%> Dunkirk<br />
+      <%= f.radio_button :Best_Picture, 'Get Out' %> Get Out<br />
+      <%= f.radio_button :Best_Picture, 'Lady Bird' %> Lady Bird<br />
+      <%= f.radio_button :Best_Picture, 'Phantom Thread' %> Phantom Thread<br />
+      <%= f.radio_button :Best_Picture, 'The Post' %> The Post<br />
+      <%= f.radio_button :Best_Picture, 'The Shape of Water' %> The Shape of Water<br />
+      <%= f.radio_button :Best_Picture, 'Three Billboards outside Ebbing, Missouri' %> Three Billboards outside Ebbing, Missouri<br />
+  </div>
+  <div class="field">
+    <%= f.label :Actor_Leading %><br>
+      <%= f.radio_button :Actor_Leading, 'Timothee Chalamet, Call Me by Your Name' %> Timothee Chalamet, Call Me by Your Name<br />
+      <%= f.radio_button :Actor_Leading, 'Daniel Day-Lewis, Phantom Thread' %> Daniel Day-Lewis, Phantom Thread<br />
+      <%= f.radio_button :Actor_Leading, 'Daniel Kaluuya, Get Out' %> Daniel Kaluuya, Get Out<br />
+      <%= f.radio_button :Actor_Leading, 'Gary Oldman, Darkest Hour' %> Gary Oldman, Darkest Hour<br />
+      <%= f.radio_button :Actor_Leading, 'Denzel Washington, Roman J. Israel, Esq.' %> Denzel Washington, Roman J. Israel, Esq.<br />
+  </div>
+  <div class="field">
+    <%= f.label :Actress_Leading %><br>
+      <%= f.radio_button :Actress_Leading, 'Sally Hawkins, The Shape of Water' %> Sally Hawkins, The Shape of Water<br />
+      <%= f.radio_button :Actress_Leading, 'Frances McDormand, Three Billboards outside Ebbing, Missouri' %> Frances McDormand, Three Billboards outside Ebbing, Missouri<br />
+      <%= f.radio_button :Actress_Leading, 'Margot Robbie, I, Tonya' %> Margot Robbie, I, Tonya<br />
+      <%= f.radio_button :Actress_Leading, 'Saoirse Ronan, Lady Bird' %> Saoirse Ronan, Lady Bird<br />
+      <%= f.radio_button :Actress_Leading, 'Meryl Streep, The Post' %> Meryl Streep, The Post<br />
+  </div>
+  <div class="field">
+    <%= f.label :Actor_Supporting %><br>
+      <%= f.radio_button :Actor_Supporting, 'Willem Dafoe, The Florida Project' %> Willem Dafoe, The Florida Project<br />
+      <%= f.radio_button :Actor_Supporting, 'Woody Harrelson, Three Billboards outside Ebbing, Missouri' %> Woody Harrelson, Three Billboards outside Ebbing, Missouri<br />
+      <%= f.radio_button :Actor_Supporting, 'Richard Jenkins, The Shape of Water' %> Richard Jenkins, The Shape of Water<br />
+      <%= f.radio_button :Actor_Supporting, 'Christopher Plummer, All the Money in the World' %> Christopher Plummer, All the Money in the World<br />
+      <%= f.radio_button :Actor_Supporting, 'Sam Rockwell, Three Billboards outside Ebbing, Missouri' %> Sam Rockwell, Three Billboards outside Ebbing, Missouri<br />
+  </div>
+  <div class="field">
+    <%= f.label :Actress_Supporting %><br>
+      <%= f.radio_button :Actress_Supporting, 'Mary J. Blige, Mudbound' %> Mary J. Blige, Mudbound<br />
+      <%= f.radio_button :Actress_Supporting, 'Allison Janney, I, Tonya' %> Allison Janney, I, Tonya<br />
+      <%= f.radio_button :Actress_Supporting, 'Lesley Manville, Phantom Thread' %> Lesley Manville, Phantom Thread<br />
+      <%= f.radio_button :Actress_Supporting, 'Laurie Metcalf, Lady Bird' %> Laurie Metcalf, Lady Bird<br />
+      <%= f.radio_button :Actress_Supporting, 'Octavia Spencer, The Shape of Water' %> Octavia Spencer, The Shape of Water<br />
+  </div>
+  <div class="field">
+    <%= f.label :Animated_Film %><br>
+      <%= f.radio_button :Animated_Film, 'The Boss Baby' %> The Boss Baby<br />
+      <%= f.radio_button :Animated_Film, 'The Breadwinner' %> The Breadwinner<br />
+      <%= f.radio_button :Animated_Film, 'Coco' %> Coco<br />
+      <%= f.radio_button :Animated_Film, 'Ferdinand' %> Ferdinand<br />
+      <%= f.radio_button :Animated_Film, 'Loving Vincent' %> Loving Vincent<br />
+  </div>
+  <div class="field">
+    <%= f.label :Cinematography %><br>
+      <%= f.radio_button :Cinematography, 'Blade Runner 2049' %> Blade Runner 2049<br />
+      <%= f.radio_button :Cinematography, 'Darkest Hour' %> Darkest Hour<br />
+      <%= f.radio_button :Cinematography, 'Dunkirk' %> Dunkirk<br />
+      <%= f.radio_button :Cinematography, 'Mudbound' %> Mudbound<br />
+      <%= f.radio_button :Cinematography, 'The Shape of Water' %> The Shape of Water<br />
+  </div>
+  <div class="field">
+    <%= f.label :Costume_Design %><br>
+      <%= f.radio_button :Costume_Design, 'Beauty and the Beast' %> Beauty and the Beast<br />
+      <%= f.radio_button :Costume_Design, 'Darkest Hour' %> Darkest Hour<br />
+      <%= f.radio_button :Costume_Design, 'Phantom Thread' %> Phantom Thread<br />
+      <%= f.radio_button :Costume_Design, 'The Shape of Water' %> The Shape of Water<br />
+      <%= f.radio_button :Costume_Design, 'Victoria & Abdul' %> Victoria & Abdul<br />
+  </div>
+  <div class="field">
+    <%= f.label :Director %><br>
+      <%= f.radio_button :Director, 'Dunkirk' %> Dunkirk<br />
+      <%= f.radio_button :Director, 'Get Out' %> Get Out<br />
+      <%= f.radio_button :Director, 'Lady Bird' %> Lady Bird<br />
+      <%= f.radio_button :Director, 'Phantom Thread' %> Phantom Thread<br />
+      <%= f.radio_button :Director, 'The Shape of Water' %> The Shape of Water<br />
+  </div>
+  <div class="field">
+    <%= f.label :Documentary %><br>
+      <%= f.radio_button :Documentary, 'Abacus: Small Enough to Jail' %> Abacus: Small Enough to Jail<br />
+      <%= f.radio_button :Documentary, 'Faces Places' %> Faces Places<br />
+      <%= f.radio_button :Documentary, 'Icarus' %> Icarus<br />
+      <%= f.radio_button :Documentary, 'Last Men in Aleppo' %> Last Men in Aleppo<br />
+      <%= f.radio_button :Documentary, 'Strong Island' %> Strong Island<br />
+  </div>
+  <div class="field">
+    <%= f.label :Documentary_Short %><br>
+      <%= f.radio_button :Documentary_Short, 'Edith+Eddie' %> Edith+Eddie<br />
+      <%= f.radio_button :Documentary_Short, 'Heaven Is a Traffic Jam on the 405' %> Heaven Is a Traffic Jam on the 405<br />
+      <%= f.radio_button :Documentary_Short, 'Heroin(e)' %> Heroin(e)<br />
+      <%= f.radio_button :Documentary_Short, 'Knife Skills' %> Knife Skills<br />
+      <%= f.radio_button :Documentary_Short, 'Traffic Stop' %> Traffic Stop<br />
+  </div>
+  <div class="field">
+    <%= f.label :Film_Editing %><br>
+      <%= f.radio_button :Film_Editing, 'Baby Driver' %> Baby Driver<br />
+      <%= f.radio_button :Film_Editing, 'Dunkirk' %> Dunkirk<br />
+      <%= f.radio_button :Film_Editing, 'I, Tonya' %> I, Tonya<br />
+      <%= f.radio_button :Film_Editing, 'The Shape of Water' %> The Shape of Water<br />
+      <%= f.radio_button :Film_Editing, 'Three Billboards outside Ebbing, Missouri' %> Three Billboards outside Ebbing, Missouri<br />
+  </div>
+  <div class="field">
+    <%= f.label :Foreign_Film %><br>
+      <%= f.radio_button :Foreign_Film, 'A Fantastic Woman' %> A Fantastic Woman<br />
+      <%= f.radio_button :Foreign_Film, 'The Insult' %> The Insult<br />
+      <%= f.radio_button :Foreign_Film, 'Loveless' %> Loveless<br />
+      <%= f.radio_button :Foreign_Film, 'On Body and Soul' %> On Body and Soul<br />
+      <%= f.radio_button :Foreign_Film, 'The Square' %> The Square<br />
+  </div>
+  <div class="field">
+    <%= f.label :Makeup_Hair %><br>
+      <%= f.radio_button :Makeup_Hair, 'Darkest Hour' %> Darkest Hour<br />
+      <%= f.radio_button :Makeup_Hair, 'Victoria & Abdul' %> Victoria & Abdul<br />
+      <%= f.radio_button :Makeup_Hair, 'Wonder' %> Wonder<br />
+  </div>
+  <div class="field">
+    <%= f.label :Original_Score %><br>
+      <%= f.radio_button :Original_Score, 'Dunkirk' %> Dunkirk<br />
+      <%= f.radio_button :Original_Score, 'Phantom Thread' %> Phantom Thread<br />
+      <%= f.radio_button :Original_Score, 'The Shape of Water' %> The Shape of Water<br />
+      <%= f.radio_button :Original_Score, 'Star Wars: The Last Jedi' %> Star Wars: The Last Jedi<br />
+      <%= f.radio_button :Original_Score, 'Three Billboards outside Ebbing, Missouri' %> Three Billboards outside Ebbing, Missouri<br />
+  </div>
+  <div class="field">
+    <%= f.label :Original_Song %><br>
+      <%= f.radio_button :Original_Song, 'Mighty River, Mudbound' %> Mighty River, Mudbound<br />
+      <%= f.radio_button :Original_Song, 'Mystery Of Love, Call Me by Your Name' %> Mystery Of Love, Call Me by Your Name<br />
+      <%= f.radio_button :Original_Song, 'Remember Me, Coco' %> Remember Me, Coco<br />
+      <%= f.radio_button :Original_Song, 'Stand Up For Something, Marshall' %> Stand Up For Something, Marshall<br />
+      <%= f.radio_button :Original_Song, 'This Is Me, The Greatest Showman' %> This Is Me, The Greatest Showman<br />
+  </div>
+  <div class="field">
+    <%= f.label :Production_Design %><br>
+      <%= f.radio_button :Production_Design, 'Beauty and the Beast' %> Beauty and the Beast<br />
+      <%= f.radio_button :Production_Design, 'Blade Runner 2049' %> Blade Runner 2049<br />
+      <%= f.radio_button :Production_Design, 'Darkest Hour' %> Darkest Hour<br />
+      <%= f.radio_button :Production_Design, 'Dunkirk' %> Dunkirk<br />
+      <%= f.radio_button :Production_Design, 'The Shape of Water' %> The Shape of Water<br />
+  </div>
+  <div class="field">
+    <%= f.label :Animated_Short_Film %><br>
+      <%= f.radio_button :Animated_Short_Film, 'Dear Basketball' %> Dear Basketball<br />
+      <%= f.radio_button :Animated_Short_Film, 'Garden Party' %> Garden Party<br />
+      <%= f.radio_button :Animated_Short_Film, 'Lou' %> Lou<br />
+      <%= f.radio_button :Animated_Short_Film, 'Negative Space' %> Negative Space<br />
+      <%= f.radio_button :Animated_Short_Film, 'Revolting Rhymes' %> Revolting Rhymes<br />
+  </div>
+  <div class="field">
+    <%= f.label :Short_Film %><br>
+      <%= f.radio_button :Short_Film, 'DeKalb Elementary' %> DeKalb Elementary<br />
+      <%= f.radio_button :Short_Film, 'The Eleven Oclock' %> The Eleven O'clock<br />
+      <%= f.radio_button :Short_Film, 'My Nephew Emmett' %> My Nephew Emmett<br />
+      <%= f.radio_button :Short_Film, 'The Silent Child' %> The Silent Child<br />
+      <%= f.radio_button :Short_Film, 'Watu Wote/All of Us' %> Watu Wote/All of Us<br />
+  </div>
+  <div class="field">
+    <%= f.label :Sound_Editing %><br>
+      <%= f.radio_button :Sound_Editing, 'Baby Driver' %> Baby Driver<br />
+      <%= f.radio_button :Sound_Editing, 'Blade Runner 2049' %> Blade Runner 2049<br />
+      <%= f.radio_button :Sound_Editing, 'Dunkirk' %> Dunkirk<br />
+      <%= f.radio_button :Sound_Editing, 'The Shape of Water' %> The Shape of Water<br />
+      <%= f.radio_button :Sound_Editing, 'Star Wars: The Last Jedi' %> Star Wars: The Last Jedi<br />
+  </div>
+  <div class="field">
+    <%= f.label :Sound_Mixing %><br>
+      <%= f.radio_button :Sound_Mixing, 'Baby Driver' %> Baby Driver<br />
+      <%= f.radio_button :Sound_Mixing, 'Blade Runner 2049' %> Blade Runner 2049<br />
+      <%= f.radio_button :Sound_Mixing, 'Dunkirk' %> Dunkirk<br />
+      <%= f.radio_button :Sound_Mixing, 'The Shape of Water' %> The Shape of Water<br />
+      <%= f.radio_button :Sound_Mixing, 'Star Wars: The Last Jedi' %> Star Wars: The Last Jedi<br />
+  </div>
+  <div class="field">
+    <%= f.label :Visual_Effects %><br>
+      <%= f.radio_button :Visual_Effects, 'Blade Runner 2049' %> Blade Runner 2049<br />
+      <%= f.radio_button :Visual_Effects, 'Guardians of the Galaxy Vol. 2' %> Guardians of the Galaxy Vol. 2<br />
+      <%= f.radio_button :Visual_Effects, 'Kong: Skull Island' %> Kong: Skull Island<br />
+      <%= f.radio_button :Visual_Effects, 'Star Wars: The Last Jedi' %> Star Wars: The Last Jedi<br />
+      <%= f.radio_button :Visual_Effects, 'War for the Planet of the Apes' %> War for the Planet of the Apes<br />
+  </div>
+  <div class="field">
+    <%= f.label :Adapted_Screenplay %><br>
+      <%= f.radio_button :Adapted_Screenplay, 'Call Me by Your Name' %> Call Me by Your Name<br />
+      <%= f.radio_button :Adapted_Screenplay, 'The Disaster Artist' %> The Disaster Artist<br />
+      <%= f.radio_button :Adapted_Screenplay, 'Logan' %> Logan<br />
+      <%= f.radio_button :Adapted_Screenplay, 'Mollys Game' %> Molly's Game<br />
+      <%= f.radio_button :Adapted_Screenplay, 'Mudbound' %> Mudbound<br />
+  </div>
+  <div class="field">
+    <%= f.label :Original_Screenplay %><br>
+      <%= f.radio_button :Original_Screenplay, 'The Big Sick' %> The Big Sick<br />
+      <%= f.radio_button :Original_Screenplay, 'Get Out' %> Get Out<br />
+      <%= f.radio_button :Original_Screenplay, 'Lady Bird' %> Lady Bird<br />
+      <%= f.radio_button :Original_Screenplay, 'The Shape of Water' %> The Shape of Water<br />
+      <%= f.radio_button :Original_Screenplay, 'Three Billboards outside Ebbing, Missouri' %> Three Billboards outside Ebbing, Missouri<br />
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
