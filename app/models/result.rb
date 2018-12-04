@@ -1,6 +1,2 @@
-class Result < ActiveRecord::Base
-    belongs_to :ballot 
+class Result < ApplicationRecord
 end
-
-
-

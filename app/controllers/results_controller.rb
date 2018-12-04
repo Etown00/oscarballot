@@ -5,7 +5,6 @@ class ResultsController < ApplicationController
   # GET /results.json
   def index
     @results = Result.all
-    @ballots = Ballot.order(params[:sort])
   end
 
   # GET /results/1
@@ -21,7 +20,6 @@ class ResultsController < ApplicationController
   # GET /results/1/edit
   def edit
   end
-#try to define scoring match and count correct answers, make them green- needs work
 
   # POST /results
   # POST /results.json
@@ -62,13 +60,7 @@ class ResultsController < ApplicationController
       format.json { head :no_content }
     end
   end
-   def answer
-    answer = Result.new(result_params)
-  end
-   def question
-    question = Ballot.new(ballot_params)
-  end
-  
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_result
@@ -77,8 +69,6 @@ class ResultsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def result_params
-     params.require(:result).permit(:Name, :Best_Picture, :Actor_Leading, :Actress_Leading, :Actor_Supporting, :Actress_Supporting, :Animated_Film, :Cinematography, :Costume_Design, :Director, :Documentary, :Documentary_Short, :Film_Editing, :Foreign_Film, :Makeup_Hair, :Original_Score, :Original_Song, :Production_Design, :Animated_Short_Film, :Short_Film, :Sound_Editing, :Sound_Mixing, :Visual_Effects, :Adapted_Screenplay, :Original_Screenplay)
+      params.require(:result).permit(:Name, :Best_Picture, :Actor_Leading, :Actress_Leading, :Actor_Supporting, :Actress_Supporting, :Animated_Film, :Cinematography, :Costume_Design, :Director, :Documentary, :Documentary_Short, :Film_Editing, :Foreign_Film, :Makeup_Hair, :Original_Score, :Original_Song, :Production_Design, :Animated_Short_Film, :Short_Film, :Sound_Editing, :Sound_Mixing, :Visual_Effects, :Adapted_Screenplay, :Original_Screenplay)
     end
-    
-  end
-
+end

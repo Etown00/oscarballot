@@ -1,4 +1,4 @@
-# PostgreSQL. Versions 8.2 and up are supported.
+# PostgreSQL. Versions 9.1 and up are supported.
 #
 # Install the pg driver:
 #   gem install pg
@@ -17,14 +17,13 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  # For details on connection pooling, see rails configuration guide
+  # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: 5
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
-  host: localhost
-  database: myapp_development
+  database: ballot_development
   username: postgres
   password: asdf
   port: 5432
@@ -33,7 +32,7 @@ development:
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  #username: myapp
+  #username: ballot
 
   # The password associated with the postgres role (username).
   #password:
@@ -61,11 +60,11 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  host: localhost
-  database: myapp_test
+  database: ballot_test
   username: postgres
   password: asdf
   port: 5432
+
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
 # ever seen by anyone, they now have access to your database.
@@ -87,8 +86,6 @@ test:
 #
 production:
   <<: *default
-  host: ec2-174-129-221-240.compute-1.amazonaws.com
-  database: dbg9t5hn612obv
-  username: rlsarpdodfxpet
-  password: 264d02ef7088a5a9d3dbc91efb62b93aeb98fdf64bc255e064514e054882dfcb
-  port: 5432
+  database: ballot_production
+  username: ballot
+  password: <%= ENV['BALLOT_DATABASE_PASSWORD'] %>

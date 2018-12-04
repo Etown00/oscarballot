@@ -80,7 +80,7 @@
 <br>
 
 <tbody>
-<div class="ballots">
+<div class="entrys">
 <table>
   <thead>
     <tr>
@@ -117,85 +117,85 @@
     </tr>
   </thead>
   
-    <% Ballot.all.each do |ballot| %>
+    <% Entry.all.each do |entry| %>
       <%  @score = 0 %>
-      <% if ballot[:Best_Picture] == Result.first[:Best_Picture] then @score += 1 %>
+      <% if entry[:Best_Picture] == Result.first[:Best_Picture] then @score += 1 %>
       <% end %>
-      <% if ballot[:Actor_Leading] == Result.first[:Actor_Leading] then @score += 1 %>
+      <% if entry[:Actor_Leading] == Result.first[:Actor_Leading] then @score += 1 %>
       <% end %>
-      <% if ballot[:Actress_Leading] == Result.first[:Actress_Leading] then @score += 1 %>
+      <% if entry[:Actress_Leading] == Result.first[:Actress_Leading] then @score += 1 %>
       <% end %>
-      <% if ballot[:Actor_Supporting] == Result.first[:Actor_Supporting] then @score += 1 %>
+      <% if entry[:Actor_Supporting] == Result.first[:Actor_Supporting] then @score += 1 %>
       <% end %>
-      <% if ballot[:Actress_Supporting] == Result.first[:Actress_Supporting] then @score += 1 %>
+      <% if entry[:Actress_Supporting] == Result.first[:Actress_Supporting] then @score += 1 %>
       <% end %>
-      <% if ballot[:Animated_Film] == Result.first[:Animated_Film] then @score += 1 %>
+      <% if entry[:Animated_Film] == Result.first[:Animated_Film] then @score += 1 %>
       <% end %>
-      <% if ballot[:Cinematography] == Result.first[:Cinematography] then @score += 1 %>
+      <% if entry[:Cinematography] == Result.first[:Cinematography] then @score += 1 %>
       <% end %>
-      <% if ballot[:Costume_Design] == Result.first[:Costume_Design] then @score += 1 %>
+      <% if entry[:Costume_Design] == Result.first[:Costume_Design] then @score += 1 %>
       <% end %>
-      <% if ballot[:Director] == Result.first[:Director] then @score += 1 %>
+      <% if entry[:Director] == Result.first[:Director] then @score += 1 %>
       <% end %>
-      <% if ballot[:Documentary] == Result.first[:Documentary] then @score += 1 %>
+      <% if entry[:Documentary] == Result.first[:Documentary] then @score += 1 %>
       <% end %>
-      <% if ballot[:Documentary_Short] == Result.first[:Documentary_Short] then @score += 1 %>
+      <% if entry[:Documentary_Short] == Result.first[:Documentary_Short] then @score += 1 %>
       <% end %>
-      <% if ballot[:Film_Editing] == Result.first[:Film_Editing] then @score += 1 %>
+      <% if entry[:Film_Editing] == Result.first[:Film_Editing] then @score += 1 %>
       <% end %>
-      <% if ballot[:Foreign_Film] == Result.first[:Foreign_Film] then @score += 1 %>
+      <% if entry[:Foreign_Film] == Result.first[:Foreign_Film] then @score += 1 %>
       <% end %>
-      <% if ballot[:Makeup_Hair] == Result.first[:Makeup_Hair] then @score += 1 %>
+      <% if entry[:Makeup_Hair] == Result.first[:Makeup_Hair] then @score += 1 %>
       <% end %>
-      <% if ballot[:Original_Score] == Result.first[:Original_Score] then @score += 1 %>
+      <% if entry[:Original_Score] == Result.first[:Original_Score] then @score += 1 %>
       <% end %>
-      <% if ballot[:Original_Song] == Result.first[:Original_Song] then @score += 1 %>
+      <% if entry[:Original_Song] == Result.first[:Original_Song] then @score += 1 %>
       <% end %>
-      <% if ballot[:Production_Design] == Result.first[:Production_Design] then @score += 1 %>
+      <% if entry[:Production_Design] == Result.first[:Production_Design] then @score += 1 %>
       <% end %>
-      <% if ballot[:Animated_Short_Film] == Result.first[:Animated_Short_Film] then @score += 1 %>
+      <% if entry[:Animated_Short_Film] == Result.first[:Animated_Short_Film] then @score += 1 %>
       <% end %>
-      <% if ballot[:Short_Film] == Result.first[:Short_Film] then @score += 1 %>
+      <% if entry[:Short_Film] == Result.first[:Short_Film] then @score += 1 %>
       <% end %>
-      <% if ballot[:Sound_Editing] == Result.first[:Sound_Editing] then @score += 1 %>
+      <% if entry[:Sound_Editing] == Result.first[:Sound_Editing] then @score += 1 %>
       <% end %>
-      <% if ballot[:Sound_Mixing] == Result.first[:Sound_Mixing] then @score += 1 %>
+      <% if entry[:Sound_Mixing] == Result.first[:Sound_Mixing] then @score += 1 %>
       <% end %>
-      <% if ballot[:Visual_Effects] == Result.first[:Visual_Effects] then @score += 1 %>
+      <% if entry[:Visual_Effects] == Result.first[:Visual_Effects] then @score += 1 %>
       <% end %>
-      <% if ballot[:Adapted_Screenplay] == Result.first[:Adapted_Screenplay] then @score += 1 %>
+      <% if entry[:Adapted_Screenplay] == Result.first[:Adapted_Screenplay] then @score += 1 %>
       <% end %>
-      <% if ballot[:Original_Screenplay] == Result.first[:Original_Screenplay] then @score += 1 %>
+      <% if entry[:Original_Screenplay] == Result.first[:Original_Screenplay] then @score += 1 %>
       <% end %>
       <tr>
-        <td><%= ballot.Name %></td>
+        <td><%= entry.Name %></td>
         <td><%= @score %></td>
-        <td><%= ballot.Best_Picture %></td>
-        <td><%= ballot.Actor_Leading %></td>
-        <td><%= ballot.Actress_Leading %></td>
-        <td><%= ballot.Actor_Supporting %></td>
-        <td><%= ballot.Actress_Supporting %></td>
-        <td><%= ballot.Animated_Film %></td>
-        <td><%= ballot.Cinematography %></td>
-        <td><%= ballot.Costume_Design %></td>
-        <td><%= ballot.Director %></td>
-        <td><%= ballot.Documentary %></td>
-        <td><%= ballot.Documentary_Short %></td>
-        <td><%= ballot.Film_Editing %></td>
-        <td><%= ballot.Foreign_Film %></td>
-        <td><%= ballot.Makeup_Hair %></td>
-        <td><%= ballot.Original_Score %></td>
-        <td><%= ballot.Original_Song %></td>
-        <td><%= ballot.Production_Design %></td>
-        <td><%= ballot.Animated_Short_Film %></td>
-        <td><%= ballot.Short_Film %></td>
-        <td><%= ballot.Sound_Editing %></td>
-        <td><%= ballot.Sound_Mixing %></td>
-        <td><%= ballot.Visual_Effects %></td>
-        <td><%= ballot.Adapted_Screenplay %></td>
-        <td><%= ballot.Original_Screenplay %></td>
-        <td><%= local_time(ballot.created_at) %></td>
-        <td><%= local_time(ballot.updated_at) %></td>
+        <td><%= entry.Best_Picture %></td>
+        <td><%= entry.Actor_Leading %></td>
+        <td><%= entry.Actress_Leading %></td>
+        <td><%= entry.Actor_Supporting %></td>
+        <td><%= entry.Actress_Supporting %></td>
+        <td><%= entry.Animated_Film %></td>
+        <td><%= entry.Cinematography %></td>
+        <td><%= entry.Costume_Design %></td>
+        <td><%= entry.Director %></td>
+        <td><%= entry.Documentary %></td>
+        <td><%= entry.Documentary_Short %></td>
+        <td><%= entry.Film_Editing %></td>
+        <td><%= entry.Foreign_Film %></td>
+        <td><%= entry.Makeup_Hair %></td>
+        <td><%= entry.Original_Score %></td>
+        <td><%= entry.Original_Song %></td>
+        <td><%= entry.Production_Design %></td>
+        <td><%= entry.Animated_Short_Film %></td>
+        <td><%= entry.Short_Film %></td>
+        <td><%= entry.Sound_Editing %></td>
+        <td><%= entry.Sound_Mixing %></td>
+        <td><%= entry.Visual_Effects %></td>
+        <td><%= entry.Adapted_Screenplay %></td>
+        <td><%= entry.Original_Screenplay %></td>
+        <td><%= localize(entry.created_at) %></td>
+        <td><%= localize(entry.updated_at) %></td>
         
       </tr>
       

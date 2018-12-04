@@ -1,34 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
+    <title>Ballot</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
-  <title>Oscar ballot game</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<div class="background"></div>
-<%= yield %>
-<div class="style2" id="footer">
-        
-		
-		<center>
-<img src="oscar_statue.jpg" alt="Oscar" width="200" height="300">
-</center>
-<center>
-         
-            Copyright © <script type="text/javascript">
-//<![CDATA[
-            var d = new Date()
-            document.write(d.getFullYear())
-            //]]>
-            </script>
-            ericberland
-          </p>
-        </center>
-<a href="http://oscarballot.herokuapp.com/89thResults.html">Results from 89th Oscarballot</a>
-</body>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
 
-
+  <body>
+    <%= yield %>
+  </body>
 </html>
