@@ -2,205 +2,76 @@
 
 <h1>Results</h1>
 
-<div class="results">
 <table>
   <thead>
-  
     <tr>
       <th>Name</th>
-      <th>Score</th>
-      <th>Best picture</th>
-      <th>Actor leading</th>
-      <th>Actress leading</th>
-      <th>Actor supporting</th>
-      <th>Actress supporting</th>
-      <th>Animated film</th>
-      <th>Cinematography</th>
-      <th>Costume design</th>
-      <th>Director</th>
-      <th>Documentary</th>
-      <th>Documentary short</th>
-      <th>Film editing</th>
-      <th>Foreign film</th>
-      <th>Makeup hair</th>
-      <th>Original score</th>
-      <th>Original song</th>
-      <th>Production design</th>
-      <th>Animated short film</th>
-      <th>Short film</th>
-      <th>Sound editing</th>
-      <th>Sound mixing</th>
-      <th>Visual effects</th>
-      <th>Adapted screenplay</th>
-      <th>Original screenplay</th>
+      <th>Best motion picture drama</th>
+      <th>Best actress in a motion picture drama</th>
+      <th>Best actor in a motion picture drama</th>
+      <th>Best motion picture musical or comedy</th>
+      <th>Best actress in a motion picture musical or comedy</th>
+      <th>Best actor in a motion picture musical or comedy</th>
+      <th>Best actress in a supporting role in any motion picture</th>
+      <th>Best actor in a supporting role in any motion picture</th>
+      <th>Best motion picture animated</th>
+      <th>Best motion picture foreign language</th>
+      <th>Best director motion picture</th>
+      <th>Best screenplay motion picture</th>
+      <th>Best original score motion picture</th>
+      <th>Best original song motion picture</th>
+      <th>Best television series drama</th>
+      <th>Best performance by an actress in a television series drama</th>
+      <th>Best performance by an actor in a television series drama</th>
+      <th>Best television series musical or comedy</th>
+      <th>Actress in a television series musical or comedy</th>
+      <th>Actor in a television series musical or comedy</th>
+      <th>Tv limited series or motion picture made for tv</th>
+      <th>Actress in a series or motion picture made for tv</th>
+      <th>Actor in a series or motion picture made for tv</th>
+      <th>Actress supporting role tv seriesormadefortvfilm</th>
+      <th>Actor supporting role tv seriesormadefortvfilm</th>
       <th colspan="3"></th>
     </tr>
-    
   </thead>
 
   <tbody>
-  
     <% @results.each do |result| %>
       <tr>
-        <td><%= 'Winner' %></td>
-        <td><%= '24' %></td>
-        <td><%= result.Best_Picture %></td>
-        <td><%= result.Actor_Leading %></td>
-        <td><%= result.Actress_Leading %></td>
-        <td><%= result.Actor_Supporting %></td>
-        <td><%= result.Actress_Supporting %></td>
-        <td><%= result.Animated_Film %></td>
-        <td><%= result.Cinematography %></td>
-        <td><%= result.Costume_Design %></td>
-        <td><%= result.Director %></td>
-        <td><%= result.Documentary %></td>
-        <td><%= result.Documentary_Short %></td>
-        <td><%= result.Film_Editing %></td>
-        <td><%= result.Foreign_Film %></td>
-        <td><%= result.Makeup_Hair %></td>
-        <td><%= result.Original_Score %></td>
-        <td><%= result.Original_Song %></td>
-        <td><%= result.Production_Design %></td>
-        <td><%= result.Animated_Short_Film %></td>
-        <td><%= result.Short_Film %></td>
-        <td><%= result.Sound_Editing %></td>
-        <td><%= result.Sound_Mixing %></td>
-        <td><%= result.Visual_Effects %></td>
-        <td><%= result.Adapted_Screenplay %></td>
-        <td><%= result.Original_Screenplay %></td>
+        <td><%= result.Name %></td>
+        <td><%= result.Best_Motion_Picture_Drama %></td>
+        <td><%= result.Best_Actress_in_a_Motion_Picture_Drama %></td>
+        <td><%= result.Best_Actor_in_a_Motion_Picture_Drama %></td>
+        <td><%= result.Best_Motion_Picture_Musical_or_Comedy %></td>
+        <td><%= result.Best_Actress_in_a_Motion_Picture_Musical_or_Comedy %></td>
+        <td><%= result.Best_Actor_in_a_Motion_Picture_Musical_or_Comedy %></td>
+        <td><%= result.Best_Actress_in_a_Supporting_Role_in_any_Motion_Picture %></td>
+        <td><%= result.Best_Actor_in_a_Supporting_Role_in_any_Motion_Picture %></td>
+        <td><%= result.Best_Motion_Picture_Animated %></td>
+        <td><%= result.Best_Motion_Picture_Foreign_Language %></td>
+        <td><%= result.Best_Director_Motion_Picture %></td>
+        <td><%= result.Best_Screenplay_Motion_Picture %></td>
+        <td><%= result.Best_Original_Score_Motion_Picture %></td>
+        <td><%= result.Best_Original_Song_Motion_Picture %></td>
+        <td><%= result.Best_Television_Series_Drama %></td>
+        <td><%= result.Best_Performance_by_an_Actress_in_a_Television_Series_Drama %></td>
+        <td><%= result.Best_Performance_by_an_Actor_in_a_Television_Series_Drama %></td>
+        <td><%= result.Best_Television_Series_Musical_or_Comedy %></td>
+        <td><%= result.Actress_in_a_Television_Series_Musical_or_Comedy %></td>
+        <td><%= result.Actor_in_a_Television_Series_Musical_or_Comedy %></td>
+        <td><%= result.Tv_Limited_Series_or_Motion_Picture_Made_for_Tv %></td>
+        <td><%= result.Actress_in_a_Series_or_Motion_Picture_Made_for_Tv %></td>
+        <td><%= result.Actor_in_a_Series_or_Motion_Picture_Made_for_Tv %></td>
+        <td><%= result.Actress_Supporting_Role_Tv_SeriesorMadeforTvFilm %></td>
+        <td><%= result.Actor_Supporting_Role_Tv_SeriesorMadeforTvFilm %></td>
         <td><%= link_to 'Show', result %></td>
         <td><%= link_to 'Edit', edit_result_path(result) %></td>
         <td><%= link_to 'Destroy', result, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
-
   </tbody>
 </table>
-</div>
+
 <br>
 
-<tbody>
-<div class="entrys">
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Score</th>
-      <th>Best picture</th>
-      <th>Actor leading</th>
-      <th>Actress leading</th>
-      <th>Actor supporting</th>
-      <th>Actress supporting</th>
-      <th>Animated film</th>
-      <th>Cinematography</th>
-      <th>Costume design</th>
-      <th>Director</th>
-      <th>Documentary</th>
-      <th>Documentary short</th>
-      <th>Film editing</th>
-      <th>Foreign film</th>
-      <th>Makeup hair</th>
-      <th>Original score</th>
-      <th>Original song</th>
-      <th>Production design</th>
-      <th>Animated short film</th>
-      <th>Short film</th>
-      <th>Sound editing</th>
-      <th>Sound mixing</th>
-      <th>Visual effects</th>
-      <th>Adapted screenplay</th>
-      <th>Original screenplay</th>
-      <th>Date Time Created</th>
-      <th>Date Time Modified</th>
-       
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-  
-    <% Entry.all.each do |entry| %>
-      <%  @score = 0 %>
-      <% if entry[:Best_Picture] == Result.first[:Best_Picture] then @score += 1 %>
-      <% end %>
-      <% if entry[:Actor_Leading] == Result.first[:Actor_Leading] then @score += 1 %>
-      <% end %>
-      <% if entry[:Actress_Leading] == Result.first[:Actress_Leading] then @score += 1 %>
-      <% end %>
-      <% if entry[:Actor_Supporting] == Result.first[:Actor_Supporting] then @score += 1 %>
-      <% end %>
-      <% if entry[:Actress_Supporting] == Result.first[:Actress_Supporting] then @score += 1 %>
-      <% end %>
-      <% if entry[:Animated_Film] == Result.first[:Animated_Film] then @score += 1 %>
-      <% end %>
-      <% if entry[:Cinematography] == Result.first[:Cinematography] then @score += 1 %>
-      <% end %>
-      <% if entry[:Costume_Design] == Result.first[:Costume_Design] then @score += 1 %>
-      <% end %>
-      <% if entry[:Director] == Result.first[:Director] then @score += 1 %>
-      <% end %>
-      <% if entry[:Documentary] == Result.first[:Documentary] then @score += 1 %>
-      <% end %>
-      <% if entry[:Documentary_Short] == Result.first[:Documentary_Short] then @score += 1 %>
-      <% end %>
-      <% if entry[:Film_Editing] == Result.first[:Film_Editing] then @score += 1 %>
-      <% end %>
-      <% if entry[:Foreign_Film] == Result.first[:Foreign_Film] then @score += 1 %>
-      <% end %>
-      <% if entry[:Makeup_Hair] == Result.first[:Makeup_Hair] then @score += 1 %>
-      <% end %>
-      <% if entry[:Original_Score] == Result.first[:Original_Score] then @score += 1 %>
-      <% end %>
-      <% if entry[:Original_Song] == Result.first[:Original_Song] then @score += 1 %>
-      <% end %>
-      <% if entry[:Production_Design] == Result.first[:Production_Design] then @score += 1 %>
-      <% end %>
-      <% if entry[:Animated_Short_Film] == Result.first[:Animated_Short_Film] then @score += 1 %>
-      <% end %>
-      <% if entry[:Short_Film] == Result.first[:Short_Film] then @score += 1 %>
-      <% end %>
-      <% if entry[:Sound_Editing] == Result.first[:Sound_Editing] then @score += 1 %>
-      <% end %>
-      <% if entry[:Sound_Mixing] == Result.first[:Sound_Mixing] then @score += 1 %>
-      <% end %>
-      <% if entry[:Visual_Effects] == Result.first[:Visual_Effects] then @score += 1 %>
-      <% end %>
-      <% if entry[:Adapted_Screenplay] == Result.first[:Adapted_Screenplay] then @score += 1 %>
-      <% end %>
-      <% if entry[:Original_Screenplay] == Result.first[:Original_Screenplay] then @score += 1 %>
-      <% end %>
-      <tr>
-        <td><%= entry.Name %></td>
-        <td><%= @score %></td>
-        <td><%= entry.Best_Picture %></td>
-        <td><%= entry.Actor_Leading %></td>
-        <td><%= entry.Actress_Leading %></td>
-        <td><%= entry.Actor_Supporting %></td>
-        <td><%= entry.Actress_Supporting %></td>
-        <td><%= entry.Animated_Film %></td>
-        <td><%= entry.Cinematography %></td>
-        <td><%= entry.Costume_Design %></td>
-        <td><%= entry.Director %></td>
-        <td><%= entry.Documentary %></td>
-        <td><%= entry.Documentary_Short %></td>
-        <td><%= entry.Film_Editing %></td>
-        <td><%= entry.Foreign_Film %></td>
-        <td><%= entry.Makeup_Hair %></td>
-        <td><%= entry.Original_Score %></td>
-        <td><%= entry.Original_Song %></td>
-        <td><%= entry.Production_Design %></td>
-        <td><%= entry.Animated_Short_Film %></td>
-        <td><%= entry.Short_Film %></td>
-        <td><%= entry.Sound_Editing %></td>
-        <td><%= entry.Sound_Mixing %></td>
-        <td><%= entry.Visual_Effects %></td>
-        <td><%= entry.Adapted_Screenplay %></td>
-        <td><%= entry.Original_Screenplay %></td>
-        <td><%= localize(entry.created_at) %></td>
-        <td><%= localize(entry.updated_at) %></td>
-        
-      </tr>
-      
-    <% end %>
-  </table>
-  </div> 
-  
-  </tbody>
+<%= link_to 'New Result', new_result_path %>

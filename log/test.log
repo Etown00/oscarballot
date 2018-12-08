@@ -1172,3 +1172,537 @@ Processing by ResultsController#show as HTML
   Rendered results/show.html.erb within layouts/application (1.0ms)
 Completed 200 OK in 15ms (Views: 2.1ms | ActiveRecord: 0.3ms)
   [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.8ms)[0m  [1m[35mALTER TABLE "entries" DISABLE TRIGGER ALL;ALTER TABLE "results" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (1.9ms)[0m  [1m[31mDELETE FROM "entries";
+DELETE FROM "results";
+INSERT INTO "entries" ("id", "Name", "Best_Picture", "Actor_Leading", "Actress_Leading", "Actor_Supporting", "Actress_Supporting", "Animated_Film", "Cinematography", "Costume_Design", "Director", "Documentary", "Documentary_Short", "Film_Editing", "Foreign_Film", "Makeup_Hair", "Original_Score", "Original_Song", "Production_Design", "Animated_Short_Film", "Short_Film", "Sound_Editing", "Sound_Mixing", "Visual_Effects", "Adapted_Screenplay", "Original_Screenplay", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2018-12-08 01:01:07.134206', '2018-12-08 01:01:07.134206'), (298486374, 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2018-12-08 01:01:07.134206', '2018-12-08 01:01:07.134206');
+INSERT INTO "results" ("id", "Name", "Best_Picture", "Actor_Leading", "Actress_Leading", "Actor_Supporting", "Actress_Supporting", "Animated_Film", "Cinematography", "Costume_Design", "Director", "Documentary", "Documentary_Short", "Film_Editing", "Foreign_Film", "Makeup_Hair", "Original_Score", "Original_Song", "Production_Design", "Animated_Short_Film", "Short_Film", "Sound_Editing", "Sound_Mixing", "Visual_Effects", "Adapted_Screenplay", "Original_Screenplay", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2018-12-08 01:01:07.141268', '2018-12-08 01:01:07.141268'), (298486374, 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2018-12-08 01:01:07.141268', '2018-12-08 01:01:07.141268')[0m
+  [1m[35m (42.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "entries" ENABLE TRIGGER ALL;ALTER TABLE "results" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------
+EntriesControllerTest: test_should_destroy_entry
+------------------------------------------------
+  [1m[36mEntry Load (0.6ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "entries"[0m
+Started DELETE "/entries/980190962" for 127.0.0.1 at 2018-12-07 17:01:08 -0800
+Processing by EntriesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mEntry Load (0.5ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEntry Destroy (0.3ms)[0m  [1m[31mDELETE FROM "entries" WHERE "entries"."id" = $1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/entries
+Completed 302 Found in 6ms (ActiveRecord: 1.2ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "entries"[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------
+EntriesControllerTest: test_should_update_entry
+-----------------------------------------------
+  [1m[36mEntry Load (0.7ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/entries/980190962" for 127.0.0.1 at 2018-12-07 17:01:08 -0800
+Processing by EntriesController#update as HTML
+  Parameters: {"entry"=>{"Actor_Leading"=>"MyString", "Actor_Supporting"=>"MyString", "Actress_Leading"=>"MyString", "Actress_Supporting"=>"MyString", "Adapted_Screenplay"=>"MyString", "Animated_Film"=>"MyString", "Animated_Short_Film"=>"MyString", "Best_Picture"=>"MyString", "Cinematography"=>"MyString", "Costume_Design"=>"MyString", "Director"=>"MyString", "Documentary"=>"MyString", "Documentary_Short"=>"MyString", "Film_Editing"=>"MyString", "Foreign_Film"=>"MyString", "Makeup_Hair"=>"MyString", "Name"=>"MyString", "Original_Score"=>"MyString", "Original_Screenplay"=>"MyString", "Original_Song"=>"MyString", "Production_Design"=>"MyString", "Short_Film"=>"MyString", "Sound_Editing"=>"MyString", "Sound_Mixing"=>"MyString", "Visual_Effects"=>"MyString"}, "id"=>"980190962"}
+  [1m[36mEntry Load (0.6ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/entries/980190962
+Completed 302 Found in 8ms (ActiveRecord: 1.2ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------
+EntriesControllerTest: test_should_get_index
+--------------------------------------------
+  [1m[36mEntry Load (0.6ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/entries" for 127.0.0.1 at 2018-12-07 17:01:08 -0800
+Processing by EntriesController#index as HTML
+  Rendering entries/index.html.erb within layouts/application
+  [1m[36mEntry Load (0.4ms)[0m  [1m[34mSELECT "entries".* FROM "entries"[0m
+  Rendered entries/index.html.erb within layouts/application (50.5ms)
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------
+EntriesControllerTest: test_should_get_new
+------------------------------------------
+  [1m[36mEntry Load (0.4ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/entries/new" for 127.0.0.1 at 2018-12-07 17:01:08 -0800
+Processing by EntriesController#new as HTML
+  Rendering entries/new.html.erb within layouts/application
+  Rendered entries/_form.html.erb (87.5ms)
+  Rendered entries/new.html.erb within layouts/application (97.6ms)
+Completed 200 OK in 943ms (Views: 932.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------
+EntriesControllerTest: test_should_show_entry
+---------------------------------------------
+  [1m[36mEntry Load (0.4ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/entries/980190962" for 127.0.0.1 at 2018-12-07 17:01:09 -0800
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mEntry Load (0.5ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  Rendered entries/show.html.erb within layouts/application (36.6ms)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.5ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------
+EntriesControllerTest: test_should_get_edit
+-------------------------------------------
+  [1m[36mEntry Load (0.3ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/entries/980190962/edit" for 127.0.0.1 at 2018-12-07 17:01:09 -0800
+Processing by EntriesController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mEntry Load (0.5ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering entries/edit.html.erb within layouts/application
+  Rendered entries/_form.html.erb (26.4ms)
+  Rendered entries/edit.html.erb within layouts/application (27.1ms)
+Completed 200 OK in 41ms (Views: 29.5ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------
+EntriesControllerTest: test_should_create_entry
+-----------------------------------------------
+  [1m[36mEntry Load (0.3ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "entries"[0m
+Started POST "/entries" for 127.0.0.1 at 2018-12-07 17:01:09 -0800
+Processing by EntriesController#create as HTML
+  Parameters: {"entry"=>{"Actor_Leading"=>"MyString", "Actor_Supporting"=>"MyString", "Actress_Leading"=>"MyString", "Actress_Supporting"=>"MyString", "Adapted_Screenplay"=>"MyString", "Animated_Film"=>"MyString", "Animated_Short_Film"=>"MyString", "Best_Picture"=>"MyString", "Cinematography"=>"MyString", "Costume_Design"=>"MyString", "Director"=>"MyString", "Documentary"=>"MyString", "Documentary_Short"=>"MyString", "Film_Editing"=>"MyString", "Foreign_Film"=>"MyString", "Makeup_Hair"=>"MyString", "Name"=>"MyString", "Original_Score"=>"MyString", "Original_Screenplay"=>"MyString", "Original_Song"=>"MyString", "Production_Design"=>"MyString", "Short_Film"=>"MyString", "Sound_Editing"=>"MyString", "Sound_Mixing"=>"MyString", "Visual_Effects"=>"MyString"}}
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEntry Create (0.5ms)[0m  [1m[32mINSERT INTO "entries" ("Name", "Best_Picture", "Actor_Leading", "Actress_Leading", "Actor_Supporting", "Actress_Supporting", "Animated_Film", "Cinematography", "Costume_Design", "Director", "Documentary", "Documentary_Short", "Film_Editing", "Foreign_Film", "Makeup_Hair", "Original_Score", "Original_Song", "Production_Design", "Animated_Short_Film", "Short_Film", "Sound_Editing", "Sound_Mixing", "Visual_Effects", "Adapted_Screenplay", "Original_Screenplay", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27) RETURNING "id"[0m  [["Name", "MyString"], ["Best_Picture", "MyString"], ["Actor_Leading", "MyString"], ["Actress_Leading", "MyString"], ["Actor_Supporting", "MyString"], ["Actress_Supporting", "MyString"], ["Animated_Film", "MyString"], ["Cinematography", "MyString"], ["Costume_Design", "MyString"], ["Director", "MyString"], ["Documentary", "MyString"], ["Documentary_Short", "MyString"], ["Film_Editing", "MyString"], ["Foreign_Film", "MyString"], ["Makeup_Hair", "MyString"], ["Original_Score", "MyString"], ["Original_Song", "MyString"], ["Production_Design", "MyString"], ["Animated_Short_Film", "MyString"], ["Short_Film", "MyString"], ["Sound_Editing", "MyString"], ["Sound_Mixing", "MyString"], ["Visual_Effects", "MyString"], ["Adapted_Screenplay", "MyString"], ["Original_Screenplay", "MyString"], ["created_at", "2018-12-08 01:01:09.761542"], ["updated_at", "2018-12-08 01:01:09.761542"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/entries/980190963
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "entries"[0m
+  [1m[36mEntry Load (0.3ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" ORDER BY "entries"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------
+ResultsControllerTest: test_should_get_index
+--------------------------------------------
+  [1m[36mResult Load (0.4ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/results" for 127.0.0.1 at 2018-12-07 17:01:09 -0800
+Processing by ResultsController#index as HTML
+  Rendering results/index.html.erb within layouts/application
+  [1m[36mResult Load (0.5ms)[0m  [1m[34mSELECT "results".* FROM "results"[0m
+  [1m[36mEntry Load (0.4ms)[0m  [1m[34mSELECT "entries".* FROM "entries"[0m
+  [1m[36mResult Load (0.5ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Result Load (0.0ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered results/index.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 46ms (Views: 32.3ms | ActiveRecord: 1.8ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------
+ResultsControllerTest: test_should_update_result
+------------------------------------------------
+  [1m[36mResult Load (0.4ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/results/980190962" for 127.0.0.1 at 2018-12-07 17:01:09 -0800
+Processing by ResultsController#update as HTML
+  Parameters: {"result"=>{"Actor_Leading"=>"MyString", "Actor_Supporting"=>"MyString", "Actress_Leading"=>"MyString", "Actress_Supporting"=>"MyString", "Adapted_Screenplay"=>"MyString", "Animated_Film"=>"MyString", "Animated_Short_Film"=>"MyString", "Best_Picture"=>"MyString", "Cinematography"=>"MyString", "Costume_Design"=>"MyString", "Director"=>"MyString", "Documentary"=>"MyString", "Documentary_Short"=>"MyString", "Film_Editing"=>"MyString", "Foreign_Film"=>"MyString", "Makeup_Hair"=>"MyString", "Name"=>"MyString", "Original_Score"=>"MyString", "Original_Screenplay"=>"MyString", "Original_Song"=>"MyString", "Production_Design"=>"MyString", "Short_Film"=>"MyString", "Sound_Editing"=>"MyString", "Sound_Mixing"=>"MyString", "Visual_Effects"=>"MyString"}, "id"=>"980190962"}
+  [1m[36mResult Load (0.4ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/results/980190962
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------
+ResultsControllerTest: test_should_destroy_result
+-------------------------------------------------
+  [1m[36mResult Load (0.5ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "results"[0m
+Started DELETE "/results/980190962" for 127.0.0.1 at 2018-12-07 17:01:09 -0800
+Processing by ResultsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mResult Load (0.5ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mResult Destroy (0.4ms)[0m  [1m[31mDELETE FROM "results" WHERE "results"."id" = $1[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/results
+Completed 302 Found in 3ms (ActiveRecord: 1.2ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "results"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------
+ResultsControllerTest: test_should_create_result
+------------------------------------------------
+  [1m[36mResult Load (0.4ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "results"[0m
+Started POST "/results" for 127.0.0.1 at 2018-12-07 17:01:09 -0800
+Processing by ResultsController#create as HTML
+  Parameters: {"result"=>{"Actor_Leading"=>"MyString", "Actor_Supporting"=>"MyString", "Actress_Leading"=>"MyString", "Actress_Supporting"=>"MyString", "Adapted_Screenplay"=>"MyString", "Animated_Film"=>"MyString", "Animated_Short_Film"=>"MyString", "Best_Picture"=>"MyString", "Cinematography"=>"MyString", "Costume_Design"=>"MyString", "Director"=>"MyString", "Documentary"=>"MyString", "Documentary_Short"=>"MyString", "Film_Editing"=>"MyString", "Foreign_Film"=>"MyString", "Makeup_Hair"=>"MyString", "Name"=>"MyString", "Original_Score"=>"MyString", "Original_Screenplay"=>"MyString", "Original_Song"=>"MyString", "Production_Design"=>"MyString", "Short_Film"=>"MyString", "Sound_Editing"=>"MyString", "Sound_Mixing"=>"MyString", "Visual_Effects"=>"MyString"}}
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mResult Create (0.4ms)[0m  [1m[32mINSERT INTO "results" ("Name", "Best_Picture", "Actor_Leading", "Actress_Leading", "Actor_Supporting", "Actress_Supporting", "Animated_Film", "Cinematography", "Costume_Design", "Director", "Documentary", "Documentary_Short", "Film_Editing", "Foreign_Film", "Makeup_Hair", "Original_Score", "Original_Song", "Production_Design", "Animated_Short_Film", "Short_Film", "Sound_Editing", "Sound_Mixing", "Visual_Effects", "Adapted_Screenplay", "Original_Screenplay", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27) RETURNING "id"[0m  [["Name", "MyString"], ["Best_Picture", "MyString"], ["Actor_Leading", "MyString"], ["Actress_Leading", "MyString"], ["Actor_Supporting", "MyString"], ["Actress_Supporting", "MyString"], ["Animated_Film", "MyString"], ["Cinematography", "MyString"], ["Costume_Design", "MyString"], ["Director", "MyString"], ["Documentary", "MyString"], ["Documentary_Short", "MyString"], ["Film_Editing", "MyString"], ["Foreign_Film", "MyString"], ["Makeup_Hair", "MyString"], ["Original_Score", "MyString"], ["Original_Song", "MyString"], ["Production_Design", "MyString"], ["Animated_Short_Film", "MyString"], ["Short_Film", "MyString"], ["Sound_Editing", "MyString"], ["Sound_Mixing", "MyString"], ["Visual_Effects", "MyString"], ["Adapted_Screenplay", "MyString"], ["Original_Screenplay", "MyString"], ["created_at", "2018-12-08 01:01:09.870446"], ["updated_at", "2018-12-08 01:01:09.870446"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/results/980190963
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "results"[0m
+  [1m[36mResult Load (0.4ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------
+ResultsControllerTest: test_should_show_result
+----------------------------------------------
+  [1m[36mResult Load (0.5ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/results/980190962" for 127.0.0.1 at 2018-12-07 17:01:09 -0800
+Processing by ResultsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mResult Load (0.4ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering results/show.html.erb within layouts/application
+  Rendered results/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 17ms (Views: 2.5ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------
+ResultsControllerTest: test_should_get_new
+------------------------------------------
+  [1m[36mResult Load (0.2ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/results/new" for 127.0.0.1 at 2018-12-07 17:01:09 -0800
+Processing by ResultsController#new as HTML
+  Rendering results/new.html.erb within layouts/application
+  Rendered results/_form.html.erb (7.2ms)
+  Rendered results/new.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 29ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------
+ResultsControllerTest: test_should_get_edit
+-------------------------------------------
+  [1m[36mResult Load (0.3ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/results/980190962/edit" for 127.0.0.1 at 2018-12-07 17:01:09 -0800
+Processing by ResultsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mResult Load (0.4ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering results/edit.html.erb within layouts/application
+  Rendered results/_form.html.erb (5.4ms)
+  Rendered results/edit.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 18ms (Views: 7.0ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (32.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (26.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7105160074432886550)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateResults (20181203060034)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (24.4ms)[0m  [1m[35mCREATE TABLE "results" ("id" bigserial primary key, "Name" character varying, "Best_Picture" character varying, "Actor_Leading" character varying, "Actress_Leading" character varying, "Actor_Supporting" character varying, "Actress_Supporting" character varying, "Animated_Film" character varying, "Cinematography" character varying, "Costume_Design" character varying, "Director" character varying, "Documentary" character varying, "Documentary_Short" character varying, "Film_Editing" character varying, "Foreign_Film" character varying, "Makeup_Hair" character varying, "Original_Score" character varying, "Original_Song" character varying, "Production_Design" character varying, "Animated_Short_Film" character varying, "Short_Film" character varying, "Sound_Editing" character varying, "Sound_Mixing" character varying, "Visual_Effects" character varying, "Adapted_Screenplay" character varying, "Original_Screenplay" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181203060034"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", "2018-12-08 03:39:47.182968"], ["updated_at", "2018-12-08 03:39:47.182968"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(7105160074432886550)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "results" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (1.6ms)[0m  [1m[31mDELETE FROM "results";
+INSERT INTO "results" ("id", "Name", "Best_Picture", "Actor_Leading", "Actress_Leading", "Actor_Supporting", "Actress_Supporting", "Animated_Film", "Cinematography", "Costume_Design", "Director", "Documentary", "Documentary_Short", "Film_Editing", "Foreign_Film", "Makeup_Hair", "Original_Score", "Original_Song", "Production_Design", "Animated_Short_Film", "Short_Film", "Sound_Editing", "Sound_Mixing", "Visual_Effects", "Adapted_Screenplay", "Original_Screenplay", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2018-12-08 03:41:50.084952', '2018-12-08 03:41:50.084952'), (298486374, 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2018-12-08 03:41:50.084952', '2018-12-08 03:41:50.084952')[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "results" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------
+ResultsControllerTest: test_should_destroy_result
+-------------------------------------------------
+  [1m[36mResult Load (0.3ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "results"[0m
+Started DELETE "/results/980190962" for 127.0.0.1 at 2018-12-07 19:41:50 -0800
+Processing by ResultsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mResult Load (0.5ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mResult Destroy (0.3ms)[0m  [1m[31mDELETE FROM "results" WHERE "results"."id" = $1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/results
+Completed 302 Found in 7ms (ActiveRecord: 1.2ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "results"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------
+ResultsControllerTest: test_should_get_edit
+-------------------------------------------
+  [1m[36mResult Load (0.4ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/results/980190962/edit" for 127.0.0.1 at 2018-12-07 19:41:50 -0800
+Processing by ResultsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mResult Load (0.4ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering results/edit.html.erb within layouts/application
+  Rendered results/_form.html.erb (25.2ms)
+  Rendered results/edit.html.erb within layouts/application (36.2ms)
+Completed 200 OK in 555ms (Views: 543.8ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------
+ResultsControllerTest: test_should_update_result
+------------------------------------------------
+  [1m[36mResult Load (0.6ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/results/980190962" for 127.0.0.1 at 2018-12-07 19:41:50 -0800
+Processing by ResultsController#update as HTML
+  Parameters: {"result"=>{"Actor_Leading"=>"MyString", "Actor_Supporting"=>"MyString", "Actress_Leading"=>"MyString", "Actress_Supporting"=>"MyString", "Adapted_Screenplay"=>"MyString", "Animated_Film"=>"MyString", "Animated_Short_Film"=>"MyString", "Best_Picture"=>"MyString", "Cinematography"=>"MyString", "Costume_Design"=>"MyString", "Director"=>"MyString", "Documentary"=>"MyString", "Documentary_Short"=>"MyString", "Film_Editing"=>"MyString", "Foreign_Film"=>"MyString", "Makeup_Hair"=>"MyString", "Name"=>"MyString", "Original_Score"=>"MyString", "Original_Screenplay"=>"MyString", "Original_Song"=>"MyString", "Production_Design"=>"MyString", "Short_Film"=>"MyString", "Sound_Editing"=>"MyString", "Sound_Mixing"=>"MyString", "Visual_Effects"=>"MyString"}, "id"=>"980190962"}
+  [1m[36mResult Load (0.6ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Unpermitted parameter: :Best_Picture
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/results/980190962
+Completed 302 Found in 7ms (ActiveRecord: 1.2ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------
+ResultsControllerTest: test_should_get_new
+------------------------------------------
+  [1m[36mResult Load (0.4ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/results/new" for 127.0.0.1 at 2018-12-07 19:41:50 -0800
+Processing by ResultsController#new as HTML
+  Rendering results/new.html.erb within layouts/application
+  Rendered results/_form.html.erb (8.2ms)
+  Rendered results/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 34ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------
+ResultsControllerTest: test_should_get_index
+--------------------------------------------
+  [1m[36mResult Load (0.3ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/results" for 127.0.0.1 at 2018-12-07 19:41:51 -0800
+Processing by ResultsController#index as HTML
+  Rendering results/index.html.erb within layouts/application
+  [1m[36mResult Load (0.7ms)[0m  [1m[34mSELECT "results".* FROM "results"[0m
+  Rendered results/index.html.erb within layouts/application (20.8ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.7ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------
+ResultsControllerTest: test_should_show_result
+----------------------------------------------
+  [1m[36mResult Load (0.3ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/results/980190962" for 127.0.0.1 at 2018-12-07 19:41:51 -0800
+Processing by ResultsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mResult Load (0.4ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering results/show.html.erb within layouts/application
+  Rendered results/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 13ms (Views: 2.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------
+ResultsControllerTest: test_should_create_result
+------------------------------------------------
+  [1m[36mResult Load (0.3ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "results"[0m
+Started POST "/results" for 127.0.0.1 at 2018-12-07 19:41:51 -0800
+Processing by ResultsController#create as HTML
+  Parameters: {"result"=>{"Actor_Leading"=>"MyString", "Actor_Supporting"=>"MyString", "Actress_Leading"=>"MyString", "Actress_Supporting"=>"MyString", "Adapted_Screenplay"=>"MyString", "Animated_Film"=>"MyString", "Animated_Short_Film"=>"MyString", "Best_Picture"=>"MyString", "Cinematography"=>"MyString", "Costume_Design"=>"MyString", "Director"=>"MyString", "Documentary"=>"MyString", "Documentary_Short"=>"MyString", "Film_Editing"=>"MyString", "Foreign_Film"=>"MyString", "Makeup_Hair"=>"MyString", "Name"=>"MyString", "Original_Score"=>"MyString", "Original_Screenplay"=>"MyString", "Original_Song"=>"MyString", "Production_Design"=>"MyString", "Short_Film"=>"MyString", "Sound_Editing"=>"MyString", "Sound_Mixing"=>"MyString", "Visual_Effects"=>"MyString"}}
+Unpermitted parameter: :Best_Picture
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mResult Create (0.5ms)[0m  [1m[32mINSERT INTO "results" ("Name", "Actor_Leading", "Actress_Leading", "Actor_Supporting", "Actress_Supporting", "Animated_Film", "Cinematography", "Costume_Design", "Director", "Documentary", "Documentary_Short", "Film_Editing", "Foreign_Film", "Makeup_Hair", "Original_Score", "Original_Song", "Production_Design", "Animated_Short_Film", "Short_Film", "Sound_Editing", "Sound_Mixing", "Visual_Effects", "Adapted_Screenplay", "Original_Screenplay", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26) RETURNING "id"[0m  [["Name", "MyString"], ["Actor_Leading", "MyString"], ["Actress_Leading", "MyString"], ["Actor_Supporting", "MyString"], ["Actress_Supporting", "MyString"], ["Animated_Film", "MyString"], ["Cinematography", "MyString"], ["Costume_Design", "MyString"], ["Director", "MyString"], ["Documentary", "MyString"], ["Documentary_Short", "MyString"], ["Film_Editing", "MyString"], ["Foreign_Film", "MyString"], ["Makeup_Hair", "MyString"], ["Original_Score", "MyString"], ["Original_Song", "MyString"], ["Production_Design", "MyString"], ["Animated_Short_Film", "MyString"], ["Short_Film", "MyString"], ["Sound_Editing", "MyString"], ["Sound_Mixing", "MyString"], ["Visual_Effects", "MyString"], ["Adapted_Screenplay", "MyString"], ["Original_Screenplay", "MyString"], ["created_at", "2018-12-08 03:41:51.079753"], ["updated_at", "2018-12-08 03:41:51.079753"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/results/980190963
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "results"[0m
+  [1m[36mResult Load (0.3ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7105160074432886550)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateEntries (20181208050641)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (19.9ms)[0m  [1m[35mCREATE TABLE "entries" ("id" bigserial primary key, "Name" character varying, "Best_Motion_Picture_Drama" character varying, "Best_Actress_in_a_Motion_Picture_Drama" character varying, "Best_Actor_in_a_Motion_Picture_Drama" character varying, "Best_Motion_Picture_Musical_or_Comedy" character varying, "Best_Actress_in_a_Motion_Picture_Musical_or_Comedy" character varying, "Best_Actor_in_a_Motion_Picture_Musical_or_Comedy" character varying, "Best_Actress_in_a_Supporting_Role_in_any_Motion_Picture" character varying, "Best_Actor_in_a_Supporting_Role_in_any_Motion_Picture" character varying, "Best_Motion_Picture_Animated" character varying, "Best_Motion_Picture_Foreign_Language" character varying, "Best_Director_Motion_Picture" character varying, "Best_Screenplay_Motion_Picture" character varying, "Best_Original_Score_Motion_Picture" character varying, "Best_Original_Song_Motion_Picture" character varying, "Best_Television_Series_Drama" character varying, "Best_Performance_by_an_Actress_in_a_Television_Series_Drama" character varying, "Best_Performance_by_an_Actor_in_a_Television_Series_Drama" character varying, "Best_Television_Series_Musical_or_Comedy" character varying, "Best_Performance_by_an_Actress_in_a_Television_Series_Musical_or_Comedy" character varying, "Best_Performance_by_an_Actor_in_a_Television_Series_Musical_or_Comedy" character varying, "Best_Television_Limited_Series_or_Motion_Picture_Made_for_Television" character varying, "Best_Performance_by_an_Actress_in_a_Limited_Series_or_Motion_Picture_Made_for_Television" character varying, "Best_Performance_by_an_Actor_in_a_Limited_Series_or_Motion_Picture_Made_for_Television" character varying, "Best_Performance_by_an_Actress_in_a_Supporting_Role_in_a_Series_Limited_Series_or_Motion_Picture_Made_for_Television" character varying, "Best_Performance_by_an_Actor_in_a_Supporting_Role_in_a_Series_Limited_Series_or_Motion_Picture_Made_for_Television" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181208050641"]]
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7105160074432886550)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (36.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (25.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7105160074432886550)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateResults (20181203060034)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (20.5ms)[0m  [1m[35mCREATE TABLE "results" ("id" bigserial primary key, "Name" character varying, "Best_Picture" character varying, "Actor_Leading" character varying, "Actress_Leading" character varying, "Actor_Supporting" character varying, "Actress_Supporting" character varying, "Animated_Film" character varying, "Cinematography" character varying, "Costume_Design" character varying, "Director" character varying, "Documentary" character varying, "Documentary_Short" character varying, "Film_Editing" character varying, "Foreign_Film" character varying, "Makeup_Hair" character varying, "Original_Score" character varying, "Original_Song" character varying, "Production_Design" character varying, "Animated_Short_Film" character varying, "Short_Film" character varying, "Sound_Editing" character varying, "Sound_Mixing" character varying, "Visual_Effects" character varying, "Adapted_Screenplay" character varying, "Original_Screenplay" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181203060034"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateEntries (20181208050641)
+  [1m[35m (5.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (18.2ms)[0m  [1m[35mCREATE TABLE "entries" ("id" bigserial primary key, "Name" character varying, "Best_Motion_Picture_Drama" character varying, "Best_Actress_in_a_Motion_Picture_Drama" character varying, "Best_Actor_in_a_Motion_Picture_Drama" character varying, "Best_Motion_Picture_Musical_or_Comedy" character varying, "Best_Actress_in_a_Motion_Picture_Musical_or_Comedy" character varying, "Best_Actor_in_a_Motion_Picture_Musical_or_Comedy" character varying, "Best_Actress_in_a_Supporting_Role_in_any_Motion_Picture" character varying, "Best_Actor_in_a_Supporting_Role_in_any_Motion_Picture" character varying, "Best_Motion_Picture_Animated" character varying, "Best_Motion_Picture_Foreign_Language" character varying, "Best_Director_Motion_Picture" character varying, "Best_Screenplay_Motion_Picture" character varying, "Best_Original_Score_Motion_Picture" character varying, "Best_Original_Song_Motion_Picture" character varying, "Best_Television_Series_Drama" character varying, "Best_Performance_by_an_Actress_in_a_Television_Series_Drama" character varying, "Best_Performance_by_an_Actor_in_a_Television_Series_Drama" character varying, "Best_Television_Series_Musical_or_Comedy" character varying, "Best_Performance_by_an_Actress_in_a_Television_Series_Musical_or_Comedy" character varying, "Best_Performance_by_an_Actor_in_a_Television_Series_Musical_or_Comedy" character varying, "Best_Television_Limited_Series_or_Motion_Picture_Made_for_Television" character varying, "Best_Performance_by_an_Actress_in_a_Limited_Series_or_Motion_Picture_Made_for_Television" character varying, "Best_Performance_by_an_Actor_in_a_Limited_Series_or_Motion_Picture_Made_for_Television" character varying, "Best_Performance_by_an_Actress_in_a_Supporting_Role_in_a_Series_Limited_Series_or_Motion_Picture_Made_for_Television" character varying, "Best_Performance_by_an_Actor_in_a_Supporting_Role_in_a_Series_Limited_Series_or_Motion_Picture_Made_for_Television" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181208050641"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", "2018-12-08 05:21:51.781956"], ["updated_at", "2018-12-08 05:21:51.781956"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7105160074432886550)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "results" DISABLE TRIGGER ALL;ALTER TABLE "entries" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (1.7ms)[0m  [1m[31mDELETE FROM "results";
+INSERT INTO "results" ("id", "Name", "Best_Picture", "Actor_Leading", "Actress_Leading", "Actor_Supporting", "Actress_Supporting", "Animated_Film", "Cinematography", "Costume_Design", "Director", "Documentary", "Documentary_Short", "Film_Editing", "Foreign_Film", "Makeup_Hair", "Original_Score", "Original_Song", "Production_Design", "Animated_Short_Film", "Short_Film", "Sound_Editing", "Sound_Mixing", "Visual_Effects", "Adapted_Screenplay", "Original_Screenplay", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2018-12-08 06:34:55.068900', '2018-12-08 06:34:55.068900'), (298486374, 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2018-12-08 06:34:55.068900', '2018-12-08 06:34:55.068900')[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "results" ENABLE TRIGGER ALL;ALTER TABLE "entries" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------
+ResultsControllerTest: test_should_get_new
+------------------------------------------
+  [1m[36mResult Load (0.3ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/results/new" for 127.0.0.1 at 2018-12-07 22:34:55 -0800
+Processing by ResultsController#new as HTML
+  Rendering results/new.html.erb within layouts/application
+  Rendered results/_form.html.erb (29.8ms)
+  Rendered results/new.html.erb within layouts/application (185.8ms)
+Completed 200 OK in 495ms (Views: 471.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------
+ResultsControllerTest: test_should_get_edit
+-------------------------------------------
+  [1m[36mResult Load (0.6ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/results/980190962/edit" for 127.0.0.1 at 2018-12-07 22:34:55 -0800
+Processing by ResultsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mResult Load (0.6ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering results/edit.html.erb within layouts/application
+  Rendered results/_form.html.erb (6.5ms)
+  Rendered results/edit.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 29ms (Views: 8.5ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------
+ResultsControllerTest: test_should_create_result
+------------------------------------------------
+  [1m[36mResult Load (0.3ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "results"[0m
+Started POST "/results" for 127.0.0.1 at 2018-12-07 22:34:55 -0800
+Processing by ResultsController#create as HTML
+  Parameters: {"result"=>{"Actor_Leading"=>"MyString", "Actor_Supporting"=>"MyString", "Actress_Leading"=>"MyString", "Actress_Supporting"=>"MyString", "Adapted_Screenplay"=>"MyString", "Animated_Film"=>"MyString", "Animated_Short_Film"=>"MyString", "Best_Picture"=>"MyString", "Cinematography"=>"MyString", "Costume_Design"=>"MyString", "Director"=>"MyString", "Documentary"=>"MyString", "Documentary_Short"=>"MyString", "Film_Editing"=>"MyString", "Foreign_Film"=>"MyString", "Makeup_Hair"=>"MyString", "Name"=>"MyString", "Original_Score"=>"MyString", "Original_Screenplay"=>"MyString", "Original_Song"=>"MyString", "Production_Design"=>"MyString", "Short_Film"=>"MyString", "Sound_Editing"=>"MyString", "Sound_Mixing"=>"MyString", "Visual_Effects"=>"MyString"}}
+Unpermitted parameter: :Best_Picture
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mResult Create (0.4ms)[0m  [1m[32mINSERT INTO "results" ("Name", "Actor_Leading", "Actress_Leading", "Actor_Supporting", "Actress_Supporting", "Animated_Film", "Cinematography", "Costume_Design", "Director", "Documentary", "Documentary_Short", "Film_Editing", "Foreign_Film", "Makeup_Hair", "Original_Score", "Original_Song", "Production_Design", "Animated_Short_Film", "Short_Film", "Sound_Editing", "Sound_Mixing", "Visual_Effects", "Adapted_Screenplay", "Original_Screenplay", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26) RETURNING "id"[0m  [["Name", "MyString"], ["Actor_Leading", "MyString"], ["Actress_Leading", "MyString"], ["Actor_Supporting", "MyString"], ["Actress_Supporting", "MyString"], ["Animated_Film", "MyString"], ["Cinematography", "MyString"], ["Costume_Design", "MyString"], ["Director", "MyString"], ["Documentary", "MyString"], ["Documentary_Short", "MyString"], ["Film_Editing", "MyString"], ["Foreign_Film", "MyString"], ["Makeup_Hair", "MyString"], ["Original_Score", "MyString"], ["Original_Song", "MyString"], ["Production_Design", "MyString"], ["Animated_Short_Film", "MyString"], ["Short_Film", "MyString"], ["Sound_Editing", "MyString"], ["Sound_Mixing", "MyString"], ["Visual_Effects", "MyString"], ["Adapted_Screenplay", "MyString"], ["Original_Screenplay", "MyString"], ["created_at", "2018-12-08 06:34:55.945479"], ["updated_at", "2018-12-08 06:34:55.945479"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/results/980190963
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "results"[0m
+  [1m[36mResult Load (0.3ms)[0m  [1m[34mSELECT  "results".* FROM "results" ORDER BY "results"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------
+ResultsControllerTest: test_should_update_result
+------------------------------------------------
+  [1m[36mResult Load (0.4ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/results/980190962" for 127.0.0.1 at 2018-12-07 22:34:55 -0800
+Processing by ResultsController#update as HTML
+  Parameters: {"result"=>{"Actor_Leading"=>"MyString", "Actor_Supporting"=>"MyString", "Actress_Leading"=>"MyString", "Actress_Supporting"=>"MyString", "Adapted_Screenplay"=>"MyString", "Animated_Film"=>"MyString", "Animated_Short_Film"=>"MyString", "Best_Picture"=>"MyString", "Cinematography"=>"MyString", "Costume_Design"=>"MyString", "Director"=>"MyString", "Documentary"=>"MyString", "Documentary_Short"=>"MyString", "Film_Editing"=>"MyString", "Foreign_Film"=>"MyString", "Makeup_Hair"=>"MyString", "Name"=>"MyString", "Original_Score"=>"MyString", "Original_Screenplay"=>"MyString", "Original_Song"=>"MyString", "Production_Design"=>"MyString", "Short_Film"=>"MyString", "Sound_Editing"=>"MyString", "Sound_Mixing"=>"MyString", "Visual_Effects"=>"MyString"}, "id"=>"980190962"}
+  [1m[36mResult Load (0.5ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Unpermitted parameter: :Best_Picture
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/results/980190962
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------
+ResultsControllerTest: test_should_show_result
+----------------------------------------------
+  [1m[36mResult Load (0.2ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/results/980190962" for 127.0.0.1 at 2018-12-07 22:34:55 -0800
+Processing by ResultsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mResult Load (0.3ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering results/show.html.erb within layouts/application
+  Rendered results/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 32ms (Views: 4.4ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+-------------------------------------------------
+ResultsControllerTest: test_should_destroy_result
+-------------------------------------------------
+  [1m[36mResult Load (0.4ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "results"[0m
+Started DELETE "/results/980190962" for 127.0.0.1 at 2018-12-07 22:34:56 -0800
+Processing by ResultsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mResult Load (0.7ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mResult Destroy (0.5ms)[0m  [1m[31mDELETE FROM "results" WHERE "results"."id" = $1[0m  [["id", 980190962]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/results
+Completed 302 Found in 5ms (ActiveRecord: 1.9ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "results"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------
+ResultsControllerTest: test_should_get_index
+--------------------------------------------
+  [1m[36mResult Load (0.4ms)[0m  [1m[34mSELECT  "results".* FROM "results" WHERE "results"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/results" for 127.0.0.1 at 2018-12-07 22:34:56 -0800
+Processing by ResultsController#index as HTML
+  Rendering results/index.html.erb within layouts/application
+  [1m[36mResult Load (0.7ms)[0m  [1m[34mSELECT "results".* FROM "results"[0m
+  Rendered results/index.html.erb within layouts/application (22.8ms)
+Completed 500 Internal Server Error in 177ms (ActiveRecord: 0.7ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m

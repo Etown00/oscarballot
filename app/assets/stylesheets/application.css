@@ -16,7 +16,7 @@
 h1 {
     float: center;
     border-radius: 15px;
-    background: gold;
+    background: blue;
     padding: 5px; 
     width: 98%;
     height: 55px; 
@@ -35,8 +35,8 @@ h2 {background-color: red;
     text-align: left;}
 body {
 
-  background-color: #000000;
-  color: gold;
+  background-color: #173147;
+  color: white;
   font-family: industry, arial, helvetica, sans-serif;
   font-size: 25px;
   line-height: 28px;
@@ -142,7 +142,7 @@ td {
     position: float right;
     top: 0;
 
-}*/
+}*//* 
 input[type=text], select {
     font-family: industry, arial, helvetica, sans-serif;
     float: center;
@@ -170,4 +170,4 @@ label {
 img {
     opacity: 0.4;
     filter: alpha(opacity=40); /* For IE8 and earlier */
-}
+} */
