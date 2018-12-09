@@ -10,138 +10,227 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :Name %>
-    <%= form.text_field :Name %>
+<div class="field">
+    <%= form.label :Name %><br>
+    <%= form.text_field :Name, :size=>"50", :maxlength=>"50" %>
   </div>
-
   <div class="field">
-    <%= form.label :Best_Motion_Picture_Drama %>
-    <%= form.text_field :Best_Motion_Picture_Drama %>
+    <%= form.label :Best_Motion_Picture_Drama %><br>
+      <%= form.radio_button :Best_Motion_Picture_Drama, 'Black Panther' %> Black Panther<br />
+      <%= form.radio_button :Best_Motion_Picture_Drama, 'BlacKkKlansman' %> BlacKkKlansman<br />
+      <%= form.radio_button :Best_Motion_Picture_Drama, 'Bohemian Rhapsody'%> Bohemian Rhapsody<br />
+      <%= form.radio_button :Best_Motion_Picture_Drama, 'If Beale Street Could Talk' %> If Beale Street Could Talk<br />
+      <%= form.radio_button :Best_Motion_Picture_Drama, 'A Star Is Born' %> A Star Is Born<br />
+      <br />
   </div>
-
   <div class="field">
-    <%= form.label :Best_Actress_in_a_Motion_Picture_Drama %>
-    <%= form.text_field :Best_Actress_in_a_Motion_Picture_Drama %>
+    <%= form.label :Best_Actress_in_a_Motion_Picture_Drama %><br>
+      <%= form.radio_button :Best_Actress_in_a_Motion_Picture_Drama, 'Glenn Close, The Wife' %> Glenn Close, The Wife<br />
+      <%= form.radio_button :Best_Actress_in_a_Motion_Picture_Drama, 'Lady Gaga, A Star Is Born' %> Lady Gaga, A Star Is Born<br />
+      <%= form.radio_button :Best_Actress_in_a_Motion_Picture_Drama, 'Nicole Kidman, Destroyer'%> Nicole Kidman, Destroyer<br />
+      <%= form.radio_button :Best_Actress_in_a_Motion_Picture_Drama, 'Melissa McCarthy, Can You Ever Forgive Me?' %> Melissa McCarthy, Can You Ever Forgive Me?<br />
+      <%= form.radio_button :Best_Actress_in_a_Motion_Picture_Drama, 'Rosamund Pike, A Private War' %> Rosamund Pike, A Private War<br />
+	<br />
   </div>
-
   <div class="field">
-    <%= form.label :Best_Actor_in_a_Motion_Picture_Drama %>
-    <%= form.text_field :Best_Actor_in_a_Motion_Picture_Drama %>
+    <%= form.label :Best_Actor_in_a_Motion_Picture_Drama %><br>
+      <%= form.radio_button :Best_Actor_in_a_Motion_Picture_Drama, 'Bradley Cooper, A Star Is Born' %> Bradley Cooper, A Star Is Born<br />
+      <%= form.radio_button :Best_Actor_in_a_Motion_Picture_Drama, 'Willem Dafoe, At Eternitys Gate' %> Willem Dafoe, At Eternitys Gate<br />
+      <%= form.radio_button :Best_Actor_in_a_Motion_Picture_Drama, 'Lucas Hedges, Boy Erased' %> Lucas Hedges, Boy Erased<br />
+      <%= form.radio_button :Best_Actor_in_a_Motion_Picture_Drama, 'Rami Malek, Bohemian Rhapsody' %> Rami Malek, Bohemian Rhapsody<br />
+      <%= form.radio_button :Best_Actor_in_a_Motion_Picture_Drama, 'John David Washington, BlacKkKlansman' %> John David Washington, BlacKkKlansman<br />
+	  <br />
   </div>
-
   <div class="field">
-    <%= form.label :Best_Motion_Picture_Musical_or_Comedy %>
-    <%= form.text_field :Best_Motion_Picture_Musical_or_Comedy %>
+    <%= form.label :Best_Motion_Picture_Musical_or_Comedy %><br>
+      <%= form.radio_button :Best_Motion_Picture_Musical_or_Comedy, 'Crazy_Rich_Asians' %> Crazy_Rich_Asians<br />
+      <%= form.radio_button :Best_Motion_Picture_Musical_or_Comedy, 'The Favourite' %> The Favourite<br />
+      <%= form.radio_button :Best_Motion_Picture_Musical_or_Comedy, 'Green Book'%> Green Book<br />
+      <%= form.radio_button :Best_Motion_Picture_Musical_or_Comedy, 'Mary Poppins Returns' %> Mary Poppins Returns<br />
+      <%= form.radio_button :Best_Motion_Picture_Musical_or_Comedy, 'Vice' %> Vice<br />
+     <br /> 
   </div>
-
   <div class="field">
-    <%= form.label :Best_Actress_in_a_Motion_Picture_Musical_or_Comedy %>
-    <%= form.text_field :Best_Actress_in_a_Motion_Picture_Musical_or_Comedy %>
+    <%= form.label :Best_Actress_in_a_Motion_Picture_Musical_or_Comedy %><br>
+      <%= form.radio_button :Best_Actress_in_a_Motion_Picture_Musical_or_Comedy, 'Emily Blunt, Mary Poppins Returns' %> Emily Blunt, Mary Poppins Returns<br />
+      <%= form.radio_button :Best_Actress_in_a_Motion_Picture_Musical_or_Comedy, 'Olivia Colman, The Favourite' %> Olivia Colman, The Favourite<br />
+      <%= form.radio_button :Best_Actress_in_a_Motion_Picture_Musical_or_Comedy, 'Elsie Fisher, Eighth Grade'%> Elsie Fisher, Eighth Grade<br />
+      <%= form.radio_button :Best_Actress_in_a_Motion_Picture_Musical_or_Comedy, 'Charlize Theron, Tully' %> Charlize Theron, Tully<br />
+      <%= form.radio_button :Best_Actress_in_a_Motion_Picture_Musical_or_Comedy, 'Constance Wu, Crazy Rich Asians' %> Constance Wu, Crazy Rich Asians<br />
+      <br />
   </div>
-
+  
   <div class="field">
-    <%= form.label :Best_Actor_in_a_Motion_Picture_Musical_or_Comedy %>
-    <%= form.text_field :Best_Actor_in_a_Motion_Picture_Musical_or_Comedy %>
+    <%= form.label :Best_Actor_in_a_Motion_Picture_Musical_or_Comedy %><br>
+      <%= form.radio_button :Best_Actor_in_a_Motion_Picture_Musical_or_Comedy, 'Christian Bale, Vice' %> Christian Bale, Vice<br />
+      <%= form.radio_button :Best_Actor_in_a_Motion_Picture_Musical_or_Comedy, 'Lin-Manuel Miranda, Mary Poppins Returns' %> Lin-Manuel Miranda, Mary Poppins Returns<br />
+      <%= form.radio_button :Best_Actor_in_a_Motion_Picture_Musical_or_Comedy, 'Viggo Mortensen, Green Book' %> Viggo Mortensen, Green Book<br />
+      <%= form.radio_button :Best_Actor_in_a_Motion_Picture_Musical_or_Comedy, 'Robert Redford, The Old Man & the Gun' %> Robert Redford, The Old Man & the Gun<br />
+      <%= form.radio_button :Best_Actor_in_a_Motion_Picture_Musical_or_Comedy, 'John C. Reilly, Stan & Ollie' %> John C. Reilly, Stan & Ollie<br />
+	  <br />
   </div>
-
   <div class="field">
-    <%= form.label :Best_Actress_in_a_Supporting_Role_in_any_Motion_Picture %>
-    <%= form.text_field :Best_Actress_in_a_Supporting_Role_in_any_Motion_Picture %>
+    <%= form.label :Best_Actress_in_a_Supporting_Role_in_any_Motion_Picture %><br>
+      <%= form.radio_button :Best_Actress_in_a_Supporting_Role_in_any_Motion_Picture, 'Amy Adams, Vice' %> Amy Adams, Vice<br />
+      <%= form.radio_button :Best_Actress_in_a_Supporting_Role_in_any_Motion_Picture, 'Claire Foy, First Man' %> Claire Foy, First Man<br />
+      <%= form.radio_button :Best_Actress_in_a_Supporting_Role_in_any_Motion_Picture, 'Regina King, If Beale Street Could Talk' %> Regina King, If Beale Street Could Talk<br />
+      <%= form.radio_button :Best_Actress_in_a_Supporting_Role_in_any_Motion_Picture, 'Emma Stone, The Favourite' %> Emma Stone, The Favourite<br />
+      <%= form.radio_button :Best_Actress_in_a_Supporting_Role_in_any_Motion_Picture, 'Rachel Weisz, The Favourite' %> Rachel Weisz, The Favourite<br />
   </div>
-
   <div class="field">
-    <%= form.label :Best_Actor_in_a_Supporting_Role_in_any_Motion_Picture %>
-    <%= form.text_field :Best_Actor_in_a_Supporting_Role_in_any_Motion_Picture %>
+    <%= form.label :Best_Actor_in_a_Supporting_Role_in_any_Motion_Picture %><br>
+      <%= form.radio_button :Best_Actor_in_a_Supporting_Role_in_any_Motion_Picture, 'Mahershala Ali, Green Book' %> Mahershala Ali, Green Book<br />
+      <%= form.radio_button :Best_Actor_in_a_Supporting_Role_in_any_Motion_Picture, 'Timothee Chalamet, Beautiful Boy' %> Timothee Chalamet, Beautiful Boy<br />
+      <%= form.radio_button :Best_Actor_in_a_Supporting_Role_in_any_Motion_Picture, 'Adam Driver, BlacKkKlansman' %> Adam Driver, BlacKkKlansman<br />
+      <%= form.radio_button :Best_Actor_in_a_Supporting_Role_in_any_Motion_Picture, 'Richard E. Grant, Can You Ever Forgive Me?' %> Richard E. Grant, Can You Ever Forgive Me?<br />
+      <%= form.radio_button :Best_Actor_in_a_Supporting_Role_in_any_Motion_Picture, 'Sam Rockwell, Vice' %> Sam Rockwell, Vice<br />
   </div>
-
+  
   <div class="field">
-    <%= form.label :Best_Motion_Picture_Animated %>
-    <%= form.text_field :Best_Motion_Picture_Animated %>
+    <%= form.label :Best_Motion_Picture_Animated %><br>
+      <%= form.radio_button :Best_Motion_Picture_Animated, 'Incredibles 2' %> Incredibles 2<br />
+      <%= form.radio_button :Best_Motion_Picture_Animated, 'Isle of Dogs' %> Isle of Dogs<br />
+      <%= form.radio_button :Best_Motion_Picture_Animated, 'Mirai' %> Mirai<br />
+      <%= form.radio_button :Best_Motion_Picture_Animated, 'Ralph Breaks the Internet' %> Ralph Breaks the Internet<br />
+      <%= form.radio_button :Best_Motion_Picture_Animated, 'Spider-Man: Into the Spider-Verse' %> Spider-Man: Into the Spider-Verse<br />
   </div>
-
   <div class="field">
-    <%= form.label :Best_Motion_Picture_Foreign_Language %>
-    <%= form.text_field :Best_Motion_Picture_Foreign_Language %>
+    <%= form.label :Best_Motion_Picture_Foreign_Language %><br>
+      <%= form.radio_button :Best_Motion_Picture_Foreign_Language, 'Capernaum' %> Capernaum<br />
+      <%= form.radio_button :Best_Motion_Picture_Foreign_Language, 'Girl' %> Girl<br />
+      <%= form.radio_button :Best_Motion_Picture_Foreign_Language, 'Never Look Away' %> Never Look Away<br />
+      <%= form.radio_button :Best_Motion_Picture_Foreign_Language, 'Roma' %> Roma<br />
+      <%= form.radio_button :Best_Motion_Picture_Foreign_Language, 'Shoplifters' %> Shoplifters<br />
   </div>
-
+  
   <div class="field">
-    <%= form.label :Best_Director_Motion_Picture %>
-    <%= form.text_field :Best_Director_Motion_Picture %>
+    <%= form.label :Best_Director_Motion_Picture %><br>
+      <%= form.radio_button :Best_Director_Motion_Picture, 'Bradley Cooper, A Star Is Born' %> Bradley Cooper, A Star Is Born<br />
+      <%= form.radio_button :Best_Director_Motion_Picture, 'Alfonso Cuaron, Roma' %> Alfonso Cuaron, Roma<br />
+      <%= form.radio_button :Best_Director_Motion_Picture, 'Peter Farrelly, Green Book' %> Peter Farrelly, Green Book<br />
+      <%= form.radio_button :Best_Director_Motion_Picture, 'Spike Lee, BlacKkKlansman' %> Spike Lee, BlacKkKlansman<br />
+      <%= form.radio_button :Best_Director_Motion_Picture, 'Adam McKay, Vice' %> Adam McKay, Vice<br />
   </div>
-
   <div class="field">
-    <%= form.label :Best_Screenplay_Motion_Picture %>
-    <%= form.text_field :Best_Screenplay_Motion_Picture %>
+    <%= form.label :Best_Screenplay_Motion_Picture %><br>
+      <%= form.radio_button :Best_Screenplay_Motion_Picture, 'Alfonso Cuaron, Roma' %> Alfonso Cuaron, Roma<br />
+      <%= form.radio_button :Best_Screenplay_Motion_Picture, 'Deborah Davis and Tony McNamara, The Favourite' %> Deborah Davis and Tony McNamara, The Favourite<br />
+      <%= form.radio_button :Best_Screenplay_Motion_Picture, 'Barry Jenkins, If Beale Street Could Talk' %> Barry Jenkins, If Beale Street Could Talk<br />
+      <%= form.radio_button :Best_Screenplay_Motion_Picture, 'Adam McKay, Vice' %> Adam McKay, Vice<br />
+      <%= form.radio_button :Best_Screenplay_Motion_Picture, 'Peter Farrelly, Nick Vallelonga, Brian Currie, Green Book' %> Peter Farrelly, Nick Vallelonga, Brian Currie, Green Book<br />
   </div>
-
   <div class="field">
-    <%= form.label :Best_Original_Score_Motion_Picture %>
-    <%= form.text_field :Best_Original_Score_Motion_Picture %>
+    <%= form.label :Best_Original_Score_Motion_Picture %><br>
+      <%= form.radio_button :Best_Original_Score_Motion_Picture, 'Marco Beltrami, A Quiet Place' %> Marco Beltrami, A Quiet Place<br />
+      <%= form.radio_button :Best_Original_Score_Motion_Picture, 'Alexandre Desplat, Isle of Dogs' %> Alexandre Desplat, Isle of Dogs<br />
+      <%= form.radio_button :Best_Original_Score_Motion_Picture, 'Ludwig Goransson, Black Panther' %> Ludwig Goransson, Black Panther<br />
+      <%= form.radio_button :Best_Original_Score_Motion_Picture, 'Justin Hurwitz, First Man' %> Justin Hurwitz, First Man<br />
+      <%= form.radio_button :Best_Original_Score_Motion_Picture, 'Marc Shaiman, Mary Poppins Returns' %> Marc Shaiman, Mary Poppins Returns<br />
   </div>
-
   <div class="field">
-    <%= form.label :Best_Original_Song_Motion_Picture %>
-    <%= form.text_field :Best_Original_Song_Motion_Picture %>
+    <%= form.label :Best_Original_Song_Motion_Picture %><br>
+      <%= form.radio_button :Best_Original_Song_Motion_Picture, 'All the Stars, Black Panther' %> All the Stars, Black Panther<br />
+      <%= form.radio_button :Best_Original_Song_Motion_Picture, 'Girl in the Movies, Dumplin' %> Girl in the Movies, Dumplin<br />
+      <%= form.radio_button :Best_Original_Song_Motion_Picture, 'Requiem For a Private War, A Private War' %> Requiem For a Private War, A Private War<br />
+      <%= form.radio_button :Best_Original_Song_Motion_Picture, 'Revelation, Boy Erased' %> Revelation, Boy Erased<br />
+      <%= form.radio_button :Best_Original_Song_Motion_Picture, 'Shallow, A Star Is Born' %> Shallow, A Star Is Born<br />
   </div>
-
+ <div class="field">
+    <%= form.label :Best_Television_Series_Drama %><br>
+      <%= form.radio_button :Best_Television_Series_Drama, 'The Americans' %> The Americans<br />
+      <%= form.radio_button :Best_Television_Series_Drama, 'Bodyguard' %> Bodyguard<br />
+      <%= form.radio_button :Best_Television_Series_Drama, 'Homecoming' %> Homecoming<br />
+      <%= form.radio_button :Best_Television_Series_Drama, 'Killing Eve' %> Killing Eve<br />
+      <%= form.radio_button :Best_Television_Series_Drama, 'Pose' %> Pose<br />
+  </div>
+  
   <div class="field">
-    <%= form.label :Best_Television_Series_Drama %>
-    <%= form.text_field :Best_Television_Series_Drama %>
+    <%= form.label :Best_Performance_by_an_Actress_in_a_Television_Series_Drama %><br>
+      <%= form.radio_button :Best_Performance_by_an_Actress_in_a_Television_Series_Drama, 'Caitriona Balfe, Outlander' %> Caitriona Balfe, Outlander<br />
+	  <%= form.radio_button :Best_Performance_by_an_Actress_in_a_Television_Series_Drama, 'Elisabeth Moss, The Handmaids Tale' %> Elisabeth Moss, The Handmaids Tale<br />
+	  <%= form.radio_button :Best_Performance_by_an_Actress_in_a_Television_Series_Drama, 'Sandra Oh, Killing Eve' %> Sandra Oh, Killing Eve<br />
+	  <%= form.radio_button :Best_Performance_by_an_Actress_in_a_Television_Series_Drama, 'Julia Roberts, Homecoming' %> Julia Roberts, Homecoming<br />
+	  <%= form.radio_button :Best_Performance_by_an_Actress_in_a_Television_Series_Drama, 'Keri Russell, The Americans' %> Keri Russell, The Americans<br />
+      
   </div>
-
   <div class="field">
-    <%= form.label :Best_Performance_by_an_Actress_in_a_Television_Series_Drama %>
-    <%= form.text_field :Best_Performance_by_an_Actress_in_a_Television_Series_Drama %>
+    <%= form.label :Best_Performance_by_an_Actor_in_a_Television_Series_Drama %><br>
+      <%= form.radio_button :Best_Performance_by_an_Actor_in_a_Television_Series_Drama, 'Jason Bateman, Ozark' %> Jason Bateman, Ozark<br />
+	  <%= form.radio_button :Best_Performance_by_an_Actor_in_a_Television_Series_Drama, 'Stephan James, Homecoming' %> Stephan James, Homecoming<br />
+	  <%= form.radio_button :Best_Performance_by_an_Actor_in_a_Television_Series_Drama, 'Richard Madden, Bodyguard' %> Richard Madden, Bodyguard<br />
+	  <%= form.radio_button :Best_Performance_by_an_Actor_in_a_Television_Series_Drama, 'Billy Porter, Pose' %> Billy Porter, Pose<br />
+	  <%= form.radio_button :Best_Performance_by_an_Actor_in_a_Television_Series_Drama, 'Matthew Rhys, The Americans' %> Matthew Rhys, The Americans<br />
+      
   </div>
-
   <div class="field">
-    <%= form.label :Best_Performance_by_an_Actor_in_a_Television_Series_Drama %>
-    <%= form.text_field :Best_Performance_by_an_Actor_in_a_Television_Series_Drama %>
+    <%= form.label :Best_Television_Series_Musical_or_Comedy %><br>
+      <%= form.radio_button :Best_Television_Series_Musical_or_Comedy, 'Barry, HBO' %> Barry, HBO<br />
+	  <%= form.radio_button :Best_Television_Series_Musical_or_Comedy, 'The Good Place, NBC' %> The Good Place, NBC<br />
+	  <%= form.radio_button :Best_Television_Series_Musical_or_Comedy, 'Kidding, Showtime' %> Kidding, Showtime<br />
+	  <%= form.radio_button :Best_Television_Series_Musical_or_Comedy, 'The Kominsky Method, Netflix' %> The Kominsky Method, Netflix<br />
+	  <%= form.radio_button :Best_Television_Series_Musical_or_Comedy, 'The Marvelous Mrs. Maisel, Amazon' %> The Marvelous Mrs. Maisel, Amazon<br />
+      
   </div>
-
   <div class="field">
-    <%= form.label :Best_Television_Series_Musical_or_Comedy %>
-    <%= form.text_field :Best_Television_Series_Musical_or_Comedy %>
+    <%= form.label :Actress_in_a_Television_Series_Musical_or_Comedy %><br>
+      <%= form.radio_button :Actress_in_a_Television_Series_Musical_or_Comedy, 'Kristen Bell, The Good Place' %> Kristen Bell, The Good Place<br />
+	  <%= form.radio_button :Actress_in_a_Television_Series_Musical_or_Comedy, 'Candice Bergen, Murphy Brown' %> Candice Bergen, Murphy Brown<br />
+	  <%= form.radio_button :Actress_in_a_Television_Series_Musical_or_Comedy, 'Alison Brie, Glow' %> Alison Brie, Glow<br />
+	  <%= form.radio_button :Actress_in_a_Television_Series_Musical_or_Comedy, 'Rachel Brosnahan, The Marvelous Mrs. Maisel' %> Rachel Brosnahan, The Marvelous Mrs. Maisel<br />
+	  <%= form.radio_button :Actress_in_a_Television_Series_Musical_or_Comedy, 'Debra Messing, Will & Grace' %> Debra Messing, Will & Grace<br />
+      
   </div>
-
   <div class="field">
-    <%= form.label :Actress_in_a_Television_Series_Musical_or_Comedy %>
-    <%= form.text_field :Actress_in_a_Television_Series_Musical_or_Comedy %>
+    <%= form.label :Actor_in_a_Television_Series_Musical_or_Comedy %><br>
+      <%= form.radio_button :Actor_in_a_Television_Series_Musical_or_Comedy, 'Sacha Baron Cohen, Who Is America?' %> Sacha Baron Cohen, Who Is America?<br />
+	  <%= form.radio_button :Actor_in_a_Television_Series_Musical_or_Comedy, 'Jim Carrey, Kidding' %> Jim Carrey, Kidding<br />
+	  <%= form.radio_button :Actor_in_a_Television_Series_Musical_or_Comedy, 'Michael Douglas, The Kominsky Method' %> Michael Douglas, The Kominsky Method<br />
+	  <%= form.radio_button :Actor_in_a_Television_Series_Musical_or_Comedy, 'Donald Glover, Atlanta' %> Donald Glover, Atlanta<br />
+	  <%= form.radio_button :Actor_in_a_Television_Series_Musical_or_Comedy, 'Bill Hader, Barry' %> Bill Hader, Barry<br />
+      
   </div>
-
   <div class="field">
-    <%= form.label :Actor_in_a_Television_Series_Musical_or_Comedy %>
-    <%= form.text_field :Actor_in_a_Television_Series_Musical_or_Comedy %>
+    <%= form.label :Tv_Limited_Series_or_Motion_Picture_Made_for_Tv %><br>
+      <%= form.radio_button :Tv_Limited_Series_or_Motion_Picture_Made_for_Tv, 'The Alienist, TNT' %> The Alienist, TNT<br />
+	  <%= form.radio_button :Tv_Limited_Series_or_Motion_Picture_Made_for_Tv, 'The Assassination of Gianni Versace: American Crime Story, FX' %> The Assassination of Gianni Versace: American Crime Story, FX<br />
+	  <%= form.radio_button :Tv_Limited_Series_or_Motion_Picture_Made_for_Tv, 'Escape at Dannemora, Showtime' %> Escape at Dannemora, Showtime<br />
+	  <%= form.radio_button :Tv_Limited_Series_or_Motion_Picture_Made_for_Tv, 'Sharp Objects, HBO' %> Sharp Objects, HBO<br />
+	  <%= form.radio_button :Tv_Limited_Series_or_Motion_Picture_Made_for_Tv, 'A Very English Scandal, Amazon' %> A Very English Scandal, Amazon<br />
+      
+  </div><div class="field">
+    <%= form.label :Actress_in_a_Series_or_Motion_Picture_Made_for_Tv %><br>
+      <%= form.radio_button :Actress_in_a_Series_or_Motion_Picture_Made_for_Tv, 'Amy Adams, Sharp Objects' %> Amy Adams, Sharp Objects<br />
+	  <%= form.radio_button :Actress_in_a_Series_or_Motion_Picture_Made_for_Tv, 'Patricia Arquette, Escape at Dannemora' %> Patricia Arquette, Escape at Dannemora<br />
+	  <%= form.radio_button :Actress_in_a_Series_or_Motion_Picture_Made_for_Tv, 'Connie Britton, Dirty John' %> Connie Britton, Dirty John<br />
+	  <%= form.radio_button :Actress_in_a_Series_or_Motion_Picture_Made_for_Tv, 'Laura Dern, The Tale' %> Laura Dern, The Tale<br />
+	  <%= form.radio_button :Actress_in_a_Series_or_Motion_Picture_Made_for_Tv, 'Regina King, Seven Seconds' %> Regina King, Seven Seconds<br />
+      
+  </div><div class="field">
+    <%= form.label :Actor_in_a_Series_or_Motion_Picture_Made_for_Tv %><br>
+      <%= form.radio_button :Actor_in_a_Series_or_Motion_Picture_Made_for_Tv, 'Antonio Banderas, Genius: Picasso' %> Antonio Banderas, Genius: Picasso<br />
+	  <%= form.radio_button :Actor_in_a_Series_or_Motion_Picture_Made_for_Tv, 'Daniel Bruhl, The Alienist' %> Daniel Bruhl, The Alienist<br />
+	  <%= form.radio_button :Actor_in_a_Series_or_Motion_Picture_Made_for_Tv, 'Darren Criss, The Assassination of Gianni Versace: American Crime Story' %> Darren Criss, The Assassination of Gianni Versace: American Crime Story<br />
+	  <%= form.radio_button :Actor_in_a_Series_or_Motion_Picture_Made_for_Tv, 'Benedict Cumberbatch, Patrick Melrose' %> Benedict Cumberbatch, Patrick Melrose<br />
+	  <%= form.radio_button :Actor_in_a_Series_or_Motion_Picture_Made_for_Tv, 'Hugh Grant, A Very English Scandal' %> Hugh Grant, A Very English Scandal<br />
+      
+  </div><div class="field">
+    <%= form.label :Actress_Supporting_Role_Tv_SeriesorMadeforTvFilm %><br>
+      <%= form.radio_button :Actress_Supporting_Role_Tv_SeriesorMadeforTvFilm, 'Alex Borstein, The Marvelous Mrs. Maisel' %> Alex Borstein, The Marvelous Mrs. Maisel<br />
+	  <%= form.radio_button :Actress_Supporting_Role_Tv_SeriesorMadeforTvFilm, 'Patricia Clarkson, Sharp Objects' %> Patricia Clarkson, Sharp Objects<br />
+	  <%= form.radio_button :Actress_Supporting_Role_Tv_SeriesorMadeforTvFilm, 'Penelope Cruz, The Assassination of Gianni Versace: American Crime Story' %> Penelope Cruz, The Assassination of Gianni Versace: American Crime Story<br />
+	  <%= form.radio_button :Actress_Supporting_Role_Tv_SeriesorMadeforTvFilm, 'Thandie Newton, Westworld' %> Thandie Newton, Westworld<br />
+	  <%= form.radio_button :Actress_Supporting_Role_Tv_SeriesorMadeforTvFilm, 'Yvonne Strahovski, The Handmaids Tale' %> Yvonne Strahovski, The Handmaids Tale<br />
+      
+  </div><div class="field">
+    <%= form.label :Actor_Supporting_Role_Tv_SeriesorMadeforTvFilm %><br>
+      <%= form.radio_button :Actor_Supporting_Role_Tv_SeriesorMadeforTvFilm, 'Alan Arkin, The Kominsky Method' %> Alan Arkin, The Kominsky Method<br />
+	  <%= form.radio_button :Actor_Supporting_Role_Tv_SeriesorMadeforTvFilm, 'Kieran Culkin, Succession' %> Kieran Culkin, Succession<br />
+	  <%= form.radio_button :Actor_Supporting_Role_Tv_SeriesorMadeforTvFilm, 'Edgar Ramirez, The Assassination of Gianni Versace: American Crime Story' %> Edgar Ramirez, The Assassination of Gianni Versace: American Crime Story<br />
+	  <%= form.radio_button :Actor_Supporting_Role_Tv_SeriesorMadeforTvFilm, 'Ben Whishaw, A Very English Scandal' %> Ben Whishaw, A Very English Scandal<br />
+	  <%= form.radio_button :Actor_Supporting_Role_Tv_SeriesorMadeforTvFilm, 'Henry Winkler, Barry' %> Henry Winkler, Barry<br />
+      
   </div>
-
-  <div class="field">
-    <%= form.label :Tv_Limited_Series_or_Motion_Picture_Made_for_Tv %>
-    <%= form.text_field :Tv_Limited_Series_or_Motion_Picture_Made_for_Tv %>
-  </div>
-
-  <div class="field">
-    <%= form.label :Actress_in_a_Series_or_Motion_Picture_Made_for_Tv %>
-    <%= form.text_field :Actress_in_a_Series_or_Motion_Picture_Made_for_Tv %>
-  </div>
-
-  <div class="field">
-    <%= form.label :Actor_in_a_Series_or_Motion_Picture_Made_for_Tv %>
-    <%= form.text_field :Actor_in_a_Series_or_Motion_Picture_Made_for_Tv %>
-  </div>
-
-  <div class="field">
-    <%= form.label :Actress_Supporting_Role_Tv_SeriesorMadeforTvFilm %>
-    <%= form.text_field :Actress_Supporting_Role_Tv_SeriesorMadeforTvFilm %>
-  </div>
-
-  <div class="field">
-    <%= form.label :Actor_Supporting_Role_Tv_SeriesorMadeforTvFilm %>
-    <%= form.text_field :Actor_Supporting_Role_Tv_SeriesorMadeforTvFilm %>
-  </div>
-
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Create Entry', :class => "button" %>
   </div>
 <% end %>

@@ -1,11 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Results</h1>
-
+<div class="results">
 <table>
   <thead>
     <tr>
       <th>Name</th>
+	  <th>Score</th>
       <th>Best motion picture drama</th>
       <th>Best actress in a motion picture drama</th>
       <th>Best actor in a motion picture drama</th>
@@ -38,7 +39,8 @@
   <tbody>
     <% @results.each do |result| %>
       <tr>
-        <td><%= result.Name %></td>
+        <td><%= 'Winner' %></td>
+		<td><%= '25' %></td>
         <td><%= result.Best_Motion_Picture_Drama %></td>
         <td><%= result.Best_Actress_in_a_Motion_Picture_Drama %></td>
         <td><%= result.Best_Actor_in_a_Motion_Picture_Drama %></td>
@@ -71,7 +73,134 @@
     <% end %>
   </tbody>
 </table>
-
+</div>
 <br>
 
-<%= link_to 'New Result', new_result_path %>
+<tbody>
+<div class="entries">
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+	  <th>Score</th>
+      <th>Best motion picture drama</th>
+      <th>Best actress in a motion picture drama</th>
+      <th>Best actor in a motion picture drama</th>
+      <th>Best motion picture musical or comedy</th>
+      <th>Best actress in a motion picture musical or comedy</th>
+      <th>Best actor in a motion picture musical or comedy</th>
+      <th>Best actress in a supporting role in any motion picture</th>
+      <th>Best actor in a supporting role in any motion picture</th>
+      <th>Best motion picture animated</th>
+      <th>Best motion picture foreign language</th>
+      <th>Best director motion picture</th>
+      <th>Best screenplay motion picture</th>
+      <th>Best original score motion picture</th>
+      <th>Best original song motion picture</th>
+      <th>Best television series drama</th>
+      <th>Best performance by an actress in a television series drama</th>
+      <th>Best performance by an actor in a television series drama</th>
+      <th>Best television series musical or comedy</th>
+      <th>Actress in a television series musical or comedy</th>
+      <th>Actor in a television series musical or comedy</th>
+      <th>Tv limited series or motion picture made for tv</th>
+      <th>Actress in a series or motion picture made for tv</th>
+      <th>Actor in a series or motion picture made for tv</th>
+      <th>Actress supporting role tv seriesormadefortvfilm</th>
+      <th>Actor supporting role tv seriesormadefortvfilm</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+
+    <% Entry.all.each do |entry| %>
+      <%  @score = 0 %>
+      <% if entry[:Best_Motion_Picture_Drama] == Result.first[:Best_Motion_Picture_Drama] then @score += 1 %>
+      <% end %>
+      <% if entry[:Best_Actress_in_a_Motion_Picture_Drama] == Result.first[:Best_Actress_in_a_Motion_Picture_Drama] then @score += 1 %>
+      <% end %>
+      <% if entry[:Best_Actor_in_a_Motion_Picture_Drama] == Result.first[:Best_Actor_in_a_Motion_Picture_Drama] then @score += 1 %>
+      <% end %>
+      <% if entry[:Best_Motion_Picture_Musical_or_Comedy] == Result.first[:Best_Motion_Picture_Musical_or_Comedy] then @score += 1 %>
+      <% end %>
+      <% if entry[:Best_Actress_in_a_Motion_Picture_Musical_or_Comedy] == Result.first[:Best_Actress_in_a_Motion_Picture_Musical_or_Comedy] then @score += 1 %>
+      <% end %>
+      <% if entry[:Best_Actor_in_a_Motion_Picture_Musical_or_Comedy] == Result.first[:Best_Actor_in_a_Motion_Picture_Musical_or_Comedy] then @score += 1 %>
+      <% end %>
+      <% if entry[:Best_Actress_in_a_Supporting_Role_in_any_Motion_Picture] == Result.first[:Best_Actress_in_a_Supporting_Role_in_any_Motion_Picture] then @score += 1 %>
+      <% end %>
+      <% if entry[:Best_Actor_in_a_Supporting_Role_in_any_Motion_Picture] == Result.first[:Best_Actor_in_a_Supporting_Role_in_any_Motion_Picture] then @score += 1 %>
+      <% end %>
+      <% if entry[:Best_Motion_Picture_Animated] == Result.first[:Best_Motion_Picture_Animated] then @score += 1 %>
+      <% end %>
+      <% if entry[:Best_Motion_Picture_Foreign_Language] == Result.first[:Best_Motion_Picture_Foreign_Language] then @score += 1 %>
+      <% end %>
+      <% if entry[:Best_Director_Motion_Picture] == Result.first[:Best_Director_Motion_Picture] then @score += 1 %>
+      <% end %>
+      <% if entry[:Best_Screenplay_Motion_Picture] == Result.first[:Best_Screenplay_Motion_Picture] then @score += 1 %>
+      <% end %>
+      <% if entry[:Best_Original_Score_Motion_Picture] == Result.first[:Best_Original_Score_Motion_Picture] then @score += 1 %>
+      <% end %>
+      <% if entry[:Best_Original_Song_Motion_Picture] == Result.first[:Best_Original_Song_Motion_Picture] then @score += 1 %>
+      <% end %>
+      <% if entry[:Best_Television_Series_Drama] == Result.first[:Best_Television_Series_Drama] then @score += 1 %>
+      <% end %>
+      <% if entry[:Best_Performance_by_an_Actress_in_a_Television_Series_Drama] == Result.first[:Best_Performance_by_an_Actress_in_a_Television_Series_Drama] then @score += 1 %>
+      <% end %>
+      <% if entry[:Best_Performance_by_an_Actor_in_a_Television_Series_Drama] == Result.first[:Best_Performance_by_an_Actor_in_a_Television_Series_Drama] then @score += 1 %>
+      <% end %>
+      <% if entry[:Best_Television_Series_Musical_or_Comedy] == Result.first[:Best_Television_Series_Musical_or_Comedy] then @score += 1 %>
+      <% end %>
+      <% if entry[:Actress_in_a_Television_Series_Musical_or_Comedy] == Result.first[:Actress_in_a_Television_Series_Musical_or_Comedy] then @score += 1 %>
+      <% end %>
+      <% if entry[:Actor_in_a_Television_Series_Musical_or_Comedy] == Result.first[:Actor_in_a_Television_Series_Musical_or_Comedy] then @score += 1 %>
+      <% end %>
+      <% if entry[:Tv_Limited_Series_or_Motion_Picture_Made_for_Tv] == Result.first[:Tv_Limited_Series_or_Motion_Picture_Made_for_Tv] then @score += 1 %>
+      <% end %>
+      <% if entry[:Actress_in_a_Series_or_Motion_Picture_Made_for_Tv] == Result.first[:Actress_in_a_Series_or_Motion_Picture_Made_for_Tv] then @score += 1 %>
+      <% end %>
+      <% if entry[:Actor_in_a_Series_or_Motion_Picture_Made_for_Tv] == Result.first[:Actor_in_a_Series_or_Motion_Picture_Made_for_Tv] then @score += 1 %>
+      <% end %>
+	  <% if entry[:Actress_Supporting_Role_Tv_SeriesorMadeforTvFilm] == Result.first[:Actress_Supporting_Role_Tv_SeriesorMadeforTvFilm] then @score += 1 %>
+      <% end %>
+      <% if entry[:Actor_Supporting_Role_Tv_SeriesorMadeforTvFilm] == Result.first[:Actor_Supporting_Role_Tv_SeriesorMadeforTvFilm] then @score += 1 %>
+      <% end %>
+	  <tr>
+	  <td><%= entry.Name %></td>
+        <td><%= @score %></td>
+        <td><%= entry.Best_Motion_Picture_Drama %></td>
+        <td><%= entry.Best_Actress_in_a_Motion_Picture_Drama %></td>
+        <td><%= entry.Best_Actor_in_a_Motion_Picture_Drama %></td>
+        <td><%= entry.Best_Motion_Picture_Musical_or_Comedy %></td>
+        <td><%= entry.Best_Actress_in_a_Motion_Picture_Musical_or_Comedy %></td>
+        <td><%= entry.Best_Actor_in_a_Motion_Picture_Musical_or_Comedy %></td>
+        <td><%= entry.Best_Actress_in_a_Supporting_Role_in_any_Motion_Picture %></td>
+        <td><%= entry.Best_Actor_in_a_Supporting_Role_in_any_Motion_Picture %></td>
+        <td><%= entry.Best_Motion_Picture_Animated %></td>
+        <td><%= entry.Best_Motion_Picture_Foreign_Language %></td>
+        <td><%= entry.Best_Director_Motion_Picture %></td>
+        <td><%= entry.Best_Screenplay_Motion_Picture %></td>
+        <td><%= entry.Best_Original_Score_Motion_Picture %></td>
+        <td><%= entry.Best_Original_Song_Motion_Picture %></td>
+        <td><%= entry.Best_Television_Series_Drama %></td>
+        <td><%= entry.Best_Performance_by_an_Actress_in_a_Television_Series_Drama %></td>
+        <td><%= entry.Best_Performance_by_an_Actor_in_a_Television_Series_Drama %></td>
+        <td><%= entry.Best_Television_Series_Musical_or_Comedy %></td>
+        <td><%= entry.Actress_in_a_Television_Series_Musical_or_Comedy %></td>
+        <td><%= entry.Actor_in_a_Television_Series_Musical_or_Comedy %></td>
+        <td><%= entry.Tv_Limited_Series_or_Motion_Picture_Made_for_Tv %></td>
+        <td><%= entry.Actress_in_a_Series_or_Motion_Picture_Made_for_Tv %></td>
+        <td><%= entry.Actor_in_a_Series_or_Motion_Picture_Made_for_Tv %></td>
+        <td><%= entry.Actress_Supporting_Role_Tv_SeriesorMadeforTvFilm %></td>
+		<td><%= entry.Actor_Supporting_Role_Tv_SeriesorMadeforTvFilm %></td>
+        <td><%= localize(entry.created_at) %></td>
+        <td><%= localize(entry.updated_at) %></td>
+        
+      </tr>
+	  <% end %>
+ 
+</table>
+</div>
+</tbody>
+
+
