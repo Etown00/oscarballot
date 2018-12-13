@@ -70,17 +70,22 @@ th {
     font-family: industry, arial, helvetica, sans-serif;
 	font-size: small;
     border: 2px solid black;
-    border-collapse: collapse;
-    padding: 15px;
-    height: 50px;
+   
+	border-spacing: 40px;
+	width: 100%;
+    padding: 5px;
+    height: 20px;
+	
     }
     
 td {
     text-align: center;
-    padding: 5px;
+    padding: 15px;
     border: 2px solid gray ;
     border-collapse: collapse;
+	width: 100%;
     font-family: industry, arial, helvetica, sans-serif;
+	
 }
 .style2 {
 	float: bottom;
@@ -181,4 +186,5 @@ footer {
    background-color: black;
    color: white;
    text-align: center;
+   
 }
