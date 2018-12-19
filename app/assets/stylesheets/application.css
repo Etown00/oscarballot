@@ -173,7 +173,7 @@ img {
     filter: alpha(opacity=40); /* For IE8 and earlier */
 } 
 footer {
-   position: relative;
+   position: fixed;
    left: 0;
    bottom: 0;
    width: 100%;
@@ -189,7 +189,7 @@ header {
    width: 100%;
    color: white;
    text-align: center;
-   padding: 90px;
+   padding: 0px;
    text-align: center;
    background: #1abc9c;
    font-size: 30px;
