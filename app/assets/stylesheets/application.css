@@ -14,17 +14,12 @@
  *= require_self
  */
 h1 {
-    float: center;
-    border-radius: 50px;
-	border-color: black;
-    background: blue;
-    padding: 8px; 
-    width: 100%;
-    height: 66px; 
-    color: #333333;
-    font-size: 16px;
-    text-align: center;
-    margin-right: 5px;
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+    
 }
 h2 {background-color: red;
     border-radius: 5px;
@@ -70,8 +65,7 @@ th {
     font-family: industry, arial, helvetica, sans-serif;
 	font-size: small;
     border: 2px solid black;
-   
-	border-spacing: 40px;
+   	border-spacing: 40px;
 	width: 100%;
     padding: 5px;
     height: 20px;
@@ -101,7 +95,7 @@ td {
   cursor: pointer;
   outline: none;
   color: #333333;
-  background-color: green;
+  background-color: #1abc9c;
   border: none;
   border-radius: 50px;
   box-shadow: 0 9px #000000;
@@ -183,8 +177,21 @@ footer {
    left: 0;
    bottom: 0;
    width: 100%;
-   background-color: black;
+   background-color: #666666;
    color: white;
    text-align: center;
+   
+}
+header {
+   position: fixed;
+   left: 0;
+   top: 0;
+   width: 100%;
+   color: white;
+   text-align: center;
+   padding: 10px;
+   text-align: center;
+   background: #1abc9c;
+   font-size: 30px;
    
 }
