@@ -30,7 +30,7 @@ h2 {background-color: red;
     line-height: 33px;
     text-align: left;}
 body {
-
+  padding-top: 55px;
   background-color: #173147;
   color: white;
   font-family: industry, arial, helvetica, sans-serif;
@@ -44,6 +44,7 @@ form
   font-family: industry, arial, helvetica, sans-serif;  
 }
 p {
+ padding-top: 30px;
  font-family: industry, arial, helvetica, sans-serif !important;
  font-size: 15px; 
  text-align: center;  
@@ -187,9 +188,10 @@ header {
    left: 0;
    top: 0;
    width: 100%;
+   height: 100px;
    color: white;
    text-align: center;
-   padding: 0px;
+   padding: 10px;
    text-align: center;
    background: #1abc9c;
    font-size: 30px;
