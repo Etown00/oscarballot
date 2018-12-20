@@ -14,7 +14,7 @@
  *= require_self
  */
 h1 {
-  padding: 60px;
+  padding: 6px;
   text-align: center;
   background: #1abc9c;
   color: white;
@@ -24,30 +24,36 @@ h1 {
 h2 {background-color: red;
     border-radius: 5px;
     color: white;
-    padding: 25px;
+    padding: 5px;
     width: 50%;
     font-size: 14px;
     line-height: 33px;
     text-align: left;}
 body {
-  padding-top: 55px;
+  padding-top: 80px;
   background-color: #173147;
   color: white;
   font-family: industry, arial, helvetica, sans-serif;
   font-size: 14px;
   line-height: 28px;
   text-align: left;
+  padding-bottom: 5px;
 }
+.actions {
+padding-bottom: 125px}
+
 form
 {
   float: center;
-  font-family: industry, arial, helvetica, sans-serif;  
+  font-family: industry, arial, helvetica, sans-serif;
+
 }
 p {
- padding-top: 30px;
+ padding-top: 5px;
  font-family: industry, arial, helvetica, sans-serif !important;
  font-size: 15px; 
- text-align: center;  
+ text-align: center;
+ padding-bottom: 5px;
 }
 table {
     border-collapse: collapse;
@@ -55,8 +61,9 @@ table {
     width: 100%;
     text-align: center;
     font-family: industry, arial, helvetica, sans-serif;
-    padding: 10px;
+    padding: 5px;
     border: 1px solid black;
+	padding-bottom: 100px;
     
 }
     
@@ -66,7 +73,7 @@ th {
     font-family: industry, arial, helvetica, sans-serif;
 	font-size: small;
     border: 2px solid black;
-   	border-spacing: 40px;
+   	border-spacing: 4px;
 	width: 100%;
     padding: 5px;
     height: 20px;
@@ -75,11 +82,12 @@ th {
     
 td {
     text-align: center;
-    padding: 15px;
+    padding: 5px;
     border: 2px solid gray ;
     border-collapse: collapse;
 	width: 100%;
     font-family: industry, arial, helvetica, sans-serif;
+	
 	
 }
 .style2 {
@@ -98,10 +106,10 @@ td {
   color: #333333;
   background-color: #1abc9c;
   border: none;
-  border-radius: 50px;
+  border-radius: 25px;
   box-shadow: 0 9px #000000;
   display: block;
-  margin: 25px;
+  margin: 5px;
 
 }
 
@@ -126,7 +134,7 @@ td {
   border-radius: 50px;
   box-shadow: 0 9px #000000;
   display: block;
-  margin: 25px;
+  margin: 5px;
 }
 
 .rbutton:hover {background-color: #4286f4}
@@ -174,24 +182,26 @@ img {
     filter: alpha(opacity=40); /* For IE8 and earlier */
 } 
 footer {
-   position: fixed;
+   float: bottom;
    left: 0;
    bottom: 0;
    width: 100%;
    background-color: #666666;
    color: white;
    text-align: center;
+   margin-top: 120px;
    
 }
 header {
    position: fixed;
    left: 0;
    top: 0;
+   bottom: 0;
    width: 100%;
    height: 100px;
    color: white;
    text-align: center;
-   padding: 10px;
+   padding: 5px;
    text-align: center;
    background: #1abc9c;
    font-size: 30px;
