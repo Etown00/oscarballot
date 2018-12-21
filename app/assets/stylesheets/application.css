@@ -32,14 +32,17 @@ h2 {background-color: red;
 	
 }
 body {
-  padding-top: 80px;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   background-color: #002845;
   color: white;
   font-family: industry, arial, helvetica, sans-serif;
   font-size: 14px;
   line-height: 28px;
   text-align: left;
-  padding-bottom: 5px;
+  padding-bottom: 150px;
 }
 .actions {
 padding-bottom: 125px}
@@ -65,7 +68,7 @@ table {
     font-family: industry, arial, helvetica, sans-serif;
     padding: 5px;
     border: 1px solid black;
-	padding-bottom: 100px;
+	padding-bottom: 900px;
     
 }
     
@@ -111,7 +114,7 @@ td {
   border-radius: 25px;
   box-shadow: 0 9px #000000;
   display: block;
-  margin: 5px;
+  margin: 25px;
 
 }
 
@@ -125,7 +128,7 @@ td {
 
 .rbutton {
   float: right;
-  padding: 15px 85px 15px 85px;
+  padding: 15px 70px 15px 70px;
   font-size: 15px;
   text-align: center;
   cursor: pointer;
@@ -133,10 +136,10 @@ td {
   color: #333333;
   background-color: gray;
   border: none;
-  border-radius: 50px;
+  border-radius: 25px;
   box-shadow: 0 9px #000000;
   display: block;
-  margin: 5px;
+  margin: 25px;
 }
 
 .rbutton:hover {background-color: #4286f4}
@@ -147,14 +150,14 @@ td {
   transform: translateY(4px);
 }
 
-.background {
+/* .background {
     width:100%;
     height:45px;
     background: url(ballotgamescom.png);
     position: float right;
     top: 0;
 
-}
+} */
 input[type=text], select {
     font-family: industry, arial, helvetica, sans-serif;
     float: center;
@@ -173,7 +176,7 @@ input[type=text], select {
 label {
     float: center;
     font-weight: bold;
-    color: orange;
+    color: #b3a369;
     font-size: 20px;
     line-height: 30px;
     text-align: left;
@@ -184,6 +187,7 @@ img {
     filter: alpha(opacity=40); /* For IE8 and earlier */
 } 
 footer {
+   position: fixed;
    float: bottom;
    left: 0;
    bottom: 0;
@@ -191,9 +195,9 @@ footer {
    background-color: #b3a369;
    color: white;
    text-align: center;
-   margin-top: 120px;
-   
+      
 }
+
 header {
    position: fixed;
    left: 0;
@@ -208,4 +212,8 @@ header {
    background: #B3A369;
    font-size: 30px;
    
+}
+
+.container {
+	flex: 1 1 auto;
 }
