@@ -16,7 +16,7 @@
 h1 {
   padding: 6px;
   text-align: center;
-  background: #172947;
+  background: #002845;
   color: white;
   font-size: 30px;
   
@@ -33,7 +33,7 @@ h2 {background-color: red;
 }
 body {
   padding-top: 80px;
-  background-color: #172947;
+  background-color: #002845;
   color: white;
   font-family: industry, arial, helvetica, sans-serif;
   font-size: 14px;
@@ -188,7 +188,7 @@ footer {
    left: 0;
    bottom: 0;
    width: 100%;
-   background-color: #0e0e0e;
+   background-color: #b3a369;
    color: white;
    text-align: center;
    margin-top: 120px;
@@ -205,7 +205,7 @@ header {
    text-align: center;
    padding: 5px;
    text-align: center;
-   background: #A77D36;
+   background: #B3A369;
    font-size: 30px;
    
 }
