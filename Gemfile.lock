@@ -193,6 +193,7 @@ DEPENDENCIES
   chromedriver-helper (= 1.2.0)
   coffee-rails (~> 4.2)
   duktape
+  io-like (~> 0.3.0)
   jbuilder (~> 2.5)
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
