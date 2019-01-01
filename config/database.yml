@@ -86,9 +86,6 @@ test:
 #
 production:
   <<: *default
-  database: ballot_production
-  username: ballot
-  password: <%= ENV['BALLOT_DATABASE_PASSWORD'] %>
   production:
-  url:  <%= ENV["DATABASE_URL"] %>
+  url: <%= ENV['postgres://mqcjuptnbommiq:68884be3ed0b340c58a586227b4853a469fb39f4b614c35b2437da3d09c30c0f@ec2-54-225-150-216.compute-1.amazonaws.com:5432/d5bq4vhnnhmhpt'] %>
   pool: <%= ENV["DB_POOL"] || ENV['RAILS_MAX_THREADS'] || 5 %>
