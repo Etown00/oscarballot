@@ -14,32 +14,31 @@ class EntriesTest < ApplicationSystemTestCase
     visit entries_url
     click_on "New Entry"
 
-    fill_in "Actor Supporting Role Tv Seriesormadefortvfilm", with: @entry.Actor_Supporting_Role_Tv_SeriesorMadeforTvFilm
-    fill_in "Actor In A Series Or Motion Picture Made For Tv", with: @entry.Actor_in_a_Series_or_Motion_Picture_Made_for_Tv
-    fill_in "Actor In A Television Series Musical Or Comedy", with: @entry.Actor_in_a_Television_Series_Musical_or_Comedy
-    fill_in "Actress Supporting Role Tv Seriesormadefortvfilm", with: @entry.Actress_Supporting_Role_Tv_SeriesorMadeforTvFilm
-    fill_in "Actress In A Series Or Motion Picture Made For Tv", with: @entry.Actress_in_a_Series_or_Motion_Picture_Made_for_Tv
-    fill_in "Actress In A Television Series Musical Or Comedy", with: @entry.Actress_in_a_Television_Series_Musical_or_Comedy
-    fill_in "Best Actor In A Motion Picture Drama", with: @entry.Best_Actor_in_a_Motion_Picture_Drama
-    fill_in "Best Actor In A Motion Picture Musical Or Comedy", with: @entry.Best_Actor_in_a_Motion_Picture_Musical_or_Comedy
-    fill_in "Best Actor In A Supporting Role In Any Motion Picture", with: @entry.Best_Actor_in_a_Supporting_Role_in_any_Motion_Picture
-    fill_in "Best Actress In A Motion Picture Drama", with: @entry.Best_Actress_in_a_Motion_Picture_Drama
-    fill_in "Best Actress In A Motion Picture Musical Or Comedy", with: @entry.Best_Actress_in_a_Motion_Picture_Musical_or_Comedy
-    fill_in "Best Actress In A Supporting Role In Any Motion Picture", with: @entry.Best_Actress_in_a_Supporting_Role_in_any_Motion_Picture
-    fill_in "Best Director Motion Picture", with: @entry.Best_Director_Motion_Picture
-    fill_in "Best Motion Picture Animated", with: @entry.Best_Motion_Picture_Animated
-    fill_in "Best Motion Picture Drama", with: @entry.Best_Motion_Picture_Drama
-    fill_in "Best Motion Picture Foreign Language", with: @entry.Best_Motion_Picture_Foreign_Language
-    fill_in "Best Motion Picture Musical Or Comedy", with: @entry.Best_Motion_Picture_Musical_or_Comedy
-    fill_in "Best Original Score Motion Picture", with: @entry.Best_Original_Score_Motion_Picture
-    fill_in "Best Original Song Motion Picture", with: @entry.Best_Original_Song_Motion_Picture
-    fill_in "Best Performance By An Actor In A Television Series Drama", with: @entry.Best_Performance_by_an_Actor_in_a_Television_Series_Drama
-    fill_in "Best Performance By An Actress In A Television Series Drama", with: @entry.Best_Performance_by_an_Actress_in_a_Television_Series_Drama
-    fill_in "Best Screenplay Motion Picture", with: @entry.Best_Screenplay_Motion_Picture
-    fill_in "Best Television Series Drama", with: @entry.Best_Television_Series_Drama
-    fill_in "Best Television Series Musical Or Comedy", with: @entry.Best_Television_Series_Musical_or_Comedy
+    fill_in "Actor leading", with: @entry.Actor_Leading
+    fill_in "Actor supporting", with: @entry.Actor_Supporting
+    fill_in "Actress leading", with: @entry.Actress_Leading
+    fill_in "Actress supporting", with: @entry.Actress_Supporting
+    fill_in "Adapted screenplay", with: @entry.Adapted_Screenplay
+    fill_in "Animated film", with: @entry.Animated_Film
+    fill_in "Animated short film", with: @entry.Animated_Short_Film
+    fill_in "Best picture", with: @entry.Best_Picture
+    fill_in "Cinematography", with: @entry.Cinematography
+    fill_in "Costume design", with: @entry.Costume_Design
+    fill_in "Director", with: @entry.Director
+    fill_in "Documentary", with: @entry.Documentary
+    fill_in "Documentary short", with: @entry.Documentary_Short
+    fill_in "Film editing", with: @entry.Film_Editing
+    fill_in "Foreign film", with: @entry.Foreign_Film
+    fill_in "Makeup hair", with: @entry.Makeup_Hair
     fill_in "Name", with: @entry.Name
-    fill_in "Tv Limited Series Or Motion Picture Made For Tv", with: @entry.Tv_Limited_Series_or_Motion_Picture_Made_for_Tv
+    fill_in "Original score", with: @entry.Original_Score
+    fill_in "Original screenplay", with: @entry.Original_Screenplay
+    fill_in "Original song", with: @entry.Original_Song
+    fill_in "Production design", with: @entry.Production_Design
+    fill_in "Short film", with: @entry.Short_Film
+    fill_in "Sound editing", with: @entry.Sound_Editing
+    fill_in "Sound mixing", with: @entry.Sound_Mixing
+    fill_in "Visual effects", with: @entry.Visual_Effects
     click_on "Create Entry"
 
     assert_text "Entry was successfully created"
@@ -50,32 +49,31 @@ class EntriesTest < ApplicationSystemTestCase
     visit entries_url
     click_on "Edit", match: :first
 
-    fill_in "Actor Supporting Role Tv Seriesormadefortvfilm", with: @entry.Actor_Supporting_Role_Tv_SeriesorMadeforTvFilm
-    fill_in "Actor In A Series Or Motion Picture Made For Tv", with: @entry.Actor_in_a_Series_or_Motion_Picture_Made_for_Tv
-    fill_in "Actor In A Television Series Musical Or Comedy", with: @entry.Actor_in_a_Television_Series_Musical_or_Comedy
-    fill_in "Actress Supporting Role Tv Seriesormadefortvfilm", with: @entry.Actress_Supporting_Role_Tv_SeriesorMadeforTvFilm
-    fill_in "Actress In A Series Or Motion Picture Made For Tv", with: @entry.Actress_in_a_Series_or_Motion_Picture_Made_for_Tv
-    fill_in "Actress In A Television Series Musical Or Comedy", with: @entry.Actress_in_a_Television_Series_Musical_or_Comedy
-    fill_in "Best Actor In A Motion Picture Drama", with: @entry.Best_Actor_in_a_Motion_Picture_Drama
-    fill_in "Best Actor In A Motion Picture Musical Or Comedy", with: @entry.Best_Actor_in_a_Motion_Picture_Musical_or_Comedy
-    fill_in "Best Actor In A Supporting Role In Any Motion Picture", with: @entry.Best_Actor_in_a_Supporting_Role_in_any_Motion_Picture
-    fill_in "Best Actress In A Motion Picture Drama", with: @entry.Best_Actress_in_a_Motion_Picture_Drama
-    fill_in "Best Actress In A Motion Picture Musical Or Comedy", with: @entry.Best_Actress_in_a_Motion_Picture_Musical_or_Comedy
-    fill_in "Best Actress In A Supporting Role In Any Motion Picture", with: @entry.Best_Actress_in_a_Supporting_Role_in_any_Motion_Picture
-    fill_in "Best Director Motion Picture", with: @entry.Best_Director_Motion_Picture
-    fill_in "Best Motion Picture Animated", with: @entry.Best_Motion_Picture_Animated
-    fill_in "Best Motion Picture Drama", with: @entry.Best_Motion_Picture_Drama
-    fill_in "Best Motion Picture Foreign Language", with: @entry.Best_Motion_Picture_Foreign_Language
-    fill_in "Best Motion Picture Musical Or Comedy", with: @entry.Best_Motion_Picture_Musical_or_Comedy
-    fill_in "Best Original Score Motion Picture", with: @entry.Best_Original_Score_Motion_Picture
-    fill_in "Best Original Song Motion Picture", with: @entry.Best_Original_Song_Motion_Picture
-    fill_in "Best Performance By An Actor In A Television Series Drama", with: @entry.Best_Performance_by_an_Actor_in_a_Television_Series_Drama
-    fill_in "Best Performance By An Actress In A Television Series Drama", with: @entry.Best_Performance_by_an_Actress_in_a_Television_Series_Drama
-    fill_in "Best Screenplay Motion Picture", with: @entry.Best_Screenplay_Motion_Picture
-    fill_in "Best Television Series Drama", with: @entry.Best_Television_Series_Drama
-    fill_in "Best Television Series Musical Or Comedy", with: @entry.Best_Television_Series_Musical_or_Comedy
+    fill_in "Actor leading", with: @entry.Actor_Leading
+    fill_in "Actor supporting", with: @entry.Actor_Supporting
+    fill_in "Actress leading", with: @entry.Actress_Leading
+    fill_in "Actress supporting", with: @entry.Actress_Supporting
+    fill_in "Adapted screenplay", with: @entry.Adapted_Screenplay
+    fill_in "Animated film", with: @entry.Animated_Film
+    fill_in "Animated short film", with: @entry.Animated_Short_Film
+    fill_in "Best picture", with: @entry.Best_Picture
+    fill_in "Cinematography", with: @entry.Cinematography
+    fill_in "Costume design", with: @entry.Costume_Design
+    fill_in "Director", with: @entry.Director
+    fill_in "Documentary", with: @entry.Documentary
+    fill_in "Documentary short", with: @entry.Documentary_Short
+    fill_in "Film editing", with: @entry.Film_Editing
+    fill_in "Foreign film", with: @entry.Foreign_Film
+    fill_in "Makeup hair", with: @entry.Makeup_Hair
     fill_in "Name", with: @entry.Name
-    fill_in "Tv Limited Series Or Motion Picture Made For Tv", with: @entry.Tv_Limited_Series_or_Motion_Picture_Made_for_Tv
+    fill_in "Original score", with: @entry.Original_Score
+    fill_in "Original screenplay", with: @entry.Original_Screenplay
+    fill_in "Original song", with: @entry.Original_Song
+    fill_in "Production design", with: @entry.Production_Design
+    fill_in "Short film", with: @entry.Short_Film
+    fill_in "Sound editing", with: @entry.Sound_Editing
+    fill_in "Sound mixing", with: @entry.Sound_Mixing
+    fill_in "Visual effects", with: @entry.Visual_Effects
     click_on "Update Entry"
 
     assert_text "Entry was successfully updated"
