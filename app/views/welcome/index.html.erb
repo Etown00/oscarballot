@@ -1,10 +1,13 @@
 
 
-<p>Create your Entry.</p>
-<p>Challange your friends.</p>
-<p>Best result wins.</p>
+<div>
 <a href="https://github.com/Etown00/oscarballot"><img style="position: absolute; top: 0; right: 0; border: 0; width: 149px; height: 149px;" src="http://aral.github.com/fork-me-on-github-retina-ribbons/right-graphite@2x.png" alt="Fork me on GitHub"></a>
 <%= button_to "Create Your Ballot Entry Here".html_safe, new_entry_path, :method => :get, :id => "button_id", :class => "button"%>
 
 <%= button_to "View Results".html_safe, Result, :method => :get, :id => "button_id", :class => "rbutton"%>
 </div>
+<body>
+<p>Create your Entry.</p>
+<p>Challange your friends.</p>
+<p>Best result wins.</p>
+</body>
