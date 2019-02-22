@@ -17,3 +17,6 @@ module Ballot
     # the framework and any gems in your application.
   end
 end
+class Application < Rails::Application
+  config.time_zone = 'Pacific Time (US & Canada)'
+end
